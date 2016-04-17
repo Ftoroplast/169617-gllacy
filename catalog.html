@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Glaccy Shop</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="logo logo--index">
+          <img src="http://placehold.it/200x50" width="200" height="50" alt="Glaccy Shop">
+        </div>
+
+        <nav class="site-navigation">
+          <ul>
+            <li class="active">
+              <a href="#">Каталог</a>
+            </li>
+            <li>
+              <a href="#">Доставка и оплата</a>
+            </li>
+            <li>
+              <a href="#">О Компании</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="site-search">
+          <a class="btn site-search__link" href="#">Поиск</a>
+        </div>
+
+        <div class="user-block">
+          <a class="btn user-block__login" href="#">Вход</a>
+        </div>
+
+        <div class="cart cart--not-empty">
+          <a class="btn cart__link" href="#">Корзина</a>
+        </div>
+
+        <div class="worktime-phone-block">
+          <span class="worktime-phone-block__worktime">С 10 до 20, ежедневно</span>
+          <span class="worktime-phone-block__phone">8 812 450-25-25</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <nav class="breadcrumbs">
+        <ul>
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="catalog.html">Каталог</a>
+          </li>
+          <li>
+            Сливочное
+          </li>
+        </ul>
+      </nav>
+
+      <h1 class="page-title">Сливочное мороженое</h1>
+
+      <section class="filter">
+        <form class="filter__form" action="#" method="POST">
+          <section class="filter__item">
+            <h3 class="filter__item-name">Сортировка:</h3>
+            <label class="filter__field">
+              <select name="Сортировка" size="1">
+                <option value="по популярности">по популярности</option>
+                <option value="по цене">по цене</option>
+              </select>
+            </label>
+          </section>
+
+          <section class="filter__item">
+            <h3 class="filter__item-name">Цена: 100р. - 500р.</h3>
+            <label class="filter__field">
+              <input type="range" min="0" max="900" step="5" value="500">
+            </label>
+          </section>
+
+          <section class="filter__item">
+            <h3 class="filter__item-name">Жирность:</h3>
+            <label class="filter__field">
+              <input type="radio" name="0%">
+              0%
+            </label>
+            <label class="filter__field">
+              <input type="radio" name="до 10%" checked>
+              до 10%
+            </label>
+            <label class="filter__field">
+              <input type="radio" name="до 30%">
+              до 30%
+            </label>
+            <label class="filter__field">
+              <input type="radio" name="выше 30%">
+              выше 30%
+            </label>
+          </section>
+
+          <section class="filter__item">
+            <label class="filter__field">
+              <input type="checkbox" name="шоколадные" checked>
+              шоколадные
+            </label>
+            <label class="filter__field">
+              <input type="checkbox" name="сахарные присыпки" checked>
+              сахарные присыпки
+            </label>
+            <label class="filter__field">
+              <input type="checkbox" name="фрукты">
+              фрукты
+            </label>
+            <label class="filter__field">
+              <input type="checkbox" name="сиропы">
+              сиропы
+            </label>
+            <label class="filter__field">
+              <input type="checkbox" name="джемы">
+              джемы
+            </label>
+          </section>
+
+          <section class="filter__item">
+            <label class="btn filter__btn">
+              <input type="submit" value="Применить">
+            </label>
+          </section>
+        </form>
+      </section>
+
+      <section class="products">
+        <article class="product">
+          <div class="product__image"><img src="" alt=""></div>
+          <span class="product__price"></span>
+          <h3 class="product__title"></h3>
+        </article>
+
+        <article class="product">
+          <div class="product__image"><img src="" alt=""></div>
+          <span class="product__price"></span>
+          <h3 class="product__title"></h3>
+        </article>
+
+        <article class="product">
+          <div class="product__image"><img src="" alt=""></div>
+          <span class="product__price"></span>
+          <h3 class="product__title"></h3>
+        </article>
+
+        <article class="product">
+          <div class="product__image"><img src="" alt=""></div>
+          <span class="product__price"></span>
+          <h3 class="product__title"></h3>
+        </article>
+
+        <article class="product">
+          <div class="product__image"><img src="" alt=""></div>
+          <span class="product__price"></span>
+          <h3 class="product__title"></h3>
+        </article>
+
+        <article class="product">
+          <div class="product__image"><img src="" alt=""></div>
+          <span class="product__price"></span>
+          <h3 class="product__title"></h3>
+        </article>
+
+        <article class="product">
+          <div class="product__image"><img src="" alt=""></div>
+          <span class="product__price"></span>
+          <h3 class="product__title"></h3>
+        </article>
+
+        <article class="product">
+          <div class="product__image"><img src="" alt=""></div>
+          <span class="product__price"></span>
+          <h3 class="product__title"></h3>
+        </article>
+
+        <article class="product">
+          <div class="product__image"><img src="" alt=""></div>
+          <span class="product__price"></span>
+          <h3 class="product__title"></h3>
+        </article>
+
+        <article class="product">
+          <div class="product__image"><img src="" alt=""></div>
+          <span class="product__price"></span>
+          <h3 class="product__title"></h3>
+        </article>
+
+        <article class="product">
+          <div class="product__image"><img src="" alt=""></div>
+          <span class="product__price"></span>
+          <h3 class="product__title"></h3>
+        </article>
+
+        <article class="product">
+          <div class="product__image"><img src="" alt=""></div>
+          <span class="product__price"></span>
+          <h3 class="product__title"></h3>
+        </article>
+
+        <div class="paginator">
+          <ul class="paginator__page-list">
+            <li class="paginator__page paginator__page--prev paginator__page--disabled">
+              <a href="#"><</a>
+            </li>
+            <li class="paginator__page paginator__page--active">
+              <a href="">1</a>
+            </li>
+            <li class="paginator__page">
+              <a href="#">2</a>
+            </li>
+            <li class="paginator__page">
+              <a href="#">3</a>
+            </li>
+            <li class="paginator__page">
+              <a href="#">4</a>
+            </li>
+            <li class="paginator__page">
+              <a href="#">5</a>
+            </li>
+            <li class="paginator__page paginator__page--next">
+              <a href="#">></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <section class="social">
+        <a class="social__btn social__btn--tw" href="#">Twitter</a>
+        <a class="social__btn social__btn--inst" href="#">Instagram</a>
+        <a class="social__btn social__btn--fb" href="#">Facebook</a>
+        <a class="social__btn social__btn--vk" href="#">Vkontakte</a>
+      </section>
+
+      <section class="footer-menu">
+        <ul class="footer-menu__list">
+          <li class="footer-menu__item">
+            <a href="#">Для поставщиков</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#">Наши документы</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#">О производстве</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#">Экологические стандарты</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="copyright">
+        <p class="copyright__text">Сделано в <a href="http://htmlacademy.ru/">HTML Academy</a> &copy; 2016</p>
+      </section>
+    </footer>
+  </body>
+</html>
