@@ -44,7 +44,7 @@
         <div class="worktime-phone-block">
           <p class="worktime-phone-block__worktime">С 10 до 20, ежедневно</p>
           <p class="worktime-phone-block__phone">
-            <a href="88124502525">8 812 450-25-25</a>
+            <a href="tel: 88124502525">8 812 450-25-25</a>
           </p>
         </div>
       </div>
@@ -52,14 +52,14 @@
 
     <main class="container">
       <nav class="breadcrumbs">
-        <ul>
-          <li>
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
             <a href="index.html">Главная</a>
           </li>
-          <li>
+          <li class="breadcrumbs__item">
             <a href="catalog.html">Каталог</a>
           </li>
-          <li>
+          <li class="breadcrumbs__item breadcrumbs__item--active">
             Сливочное
           </li>
         </ul>
@@ -81,16 +81,18 @@
 
           <section class="filter__item">
             <h3 class="filter__item-name">Цена: 100р. - 500р.</h3>
-            <div class="range-filter">
-              <div class="range-filter__controls">
-                <div class="range-filter__scale">
-                  <div class="range-filter__bar"></div>
+            <div class="filter__item">
+              <div class="range-filter">
+                <div class="range-filter__controls">
+                  <div class="range-filter__scale">
+                    <div class="range-filter__bar"></div>
+                  </div>
+                  <div class="range-filter__toggle range-filter__toggle--min-toggle"></div>
+                  <div class="range-filter__toggle range-filter__toggle--max-toggle"></div>
                 </div>
-                <div class="range-filter__toggle range-filter__toggle--min-toggle"></div>
-                <div class="range-filter__toggle range-filter__toggle--max-toggle"></div>
+                <input type="text" name="min-price" value="100" hidden>
+                <input type="text" name="max-price" value="500" hidden>
               </div>
-              <input type="text" value="100" hidden>
-              <input type="text" value="500" hidden>
             </div>
           </section>
 
@@ -244,26 +246,26 @@
         </article>
 
         <div class="paginator">
-          <ul class="paginator__page-list">
-            <li class="paginator__page paginator__page--prev paginator__page--disable">
+          <ul class="paginator__list">
+            <li class="paginator__item paginator__item--prev paginator__item--disable">
               &lt;
             </li>
-            <li class="paginator__page paginator__page--active">
+            <li class="paginator__item paginator__item--active">
               1
             </li>
-            <li class="paginator__page">
+            <li class="paginator__item">
               <a href="#">2</a>
             </li>
-            <li class="paginator__page">
+            <li class="paginator__item">
               <a href="#">3</a>
             </li>
-            <li class="paginator__page">
+            <li class="paginator__item">
               <a href="#">4</a>
             </li>
-            <li class="paginator__page">
+            <li class="paginator__item">
               <a href="#">5</a>
             </li>
-            <li class="paginator__page paginator__page--next">
+            <li class="paginator__item paginator__item--next">
               <a href="#">&gt;</a>
             </li>
           </ul>
