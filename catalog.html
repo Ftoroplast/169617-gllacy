@@ -51,53 +51,49 @@
     </header>
 
     <main class="container">
-      <nav class="breadcrumbs">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="catalog.html">Каталог</a>
-          </li>
-          <li class="breadcrumbs__item breadcrumbs__item--active">
-            Сливочное
-          </li>
-        </ul>
-      </nav>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="catalog.html">Каталог</a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--active">
+          Сливочное
+        </li>
+      </ul>
 
       <h1 class="page-title">Сливочное мороженое</h1>
 
       <section class="filter">
         <form class="filter__form" action="#" method="POST">
-          <section class="filter__item">
-            <p class="filter__item-name">Сортировка:</p>
+          <fieldset class="filter__item">
+            <legend class="filter__item-name">Сортировка:</legend>
             <label class="filter__field">
               <select name="Сортировка" size="1">
                 <option value="по популярности">по популярности</option>
                 <option value="по цене">по цене</option>
               </select>
             </label>
-          </section>
+          </fieldset>
 
-          <section class="filter__item">
-            <p class="filter__item-name">Цена: 100р. - 500р.</p>
-            <div class="filter__item">
-              <div class="range-filter">
-                <div class="range-filter__controls">
-                  <div class="range-filter__scale">
-                    <div class="range-filter__bar"></div>
-                  </div>
-                  <div class="range-filter__toggle range-filter__toggle--min-toggle"></div>
-                  <div class="range-filter__toggle range-filter__toggle--max-toggle"></div>
+          <fieldset class="filter__item">
+            <legend class="filter__item-name">Цена: 100р. - 500р.</legend>
+            <div class="range-filter">
+              <div class="range-filter__controls">
+                <div class="range-filter__scale">
+                  <div class="range-filter__bar"></div>
                 </div>
-                <input type="text" name="min-price" value="100" hidden>
-                <input type="text" name="max-price" value="500" hidden>
+                <div class="range-filter__toggle range-filter__toggle--min-toggle"></div>
+                <div class="range-filter__toggle range-filter__toggle--max-toggle"></div>
               </div>
+              <input type="text" name="min-price" value="100" hidden>
+              <input type="text" name="max-price" value="500" hidden>
             </div>
-          </section>
+          </fieldset>
 
-          <section class="filter__item">
-            <p class="filter__item-name">Жирность:</p>
+          <fieldset class="filter__item">
+            <legend class="filter__item-name">Жирность:</legend>
             <label class="filter__field">
               <input type="radio" name="Жирность" value="0%">
               0%
@@ -114,10 +110,10 @@
               <input type="radio" name="Жирность" value="выше 30%">
               выше 30%
             </label>
-          </section>
+          </fieldset>
 
-          <section class="filter__item">
-            <p class="filter__item-name">Наполнители:</p>
+          <fieldset class="filter__item">
+            <legend class="filter__item-name">Наполнители:</legend>
             <label class="filter__field">
               <input type="checkbox" name="шоколадные" checked>
               шоколадные
@@ -138,13 +134,13 @@
               <input type="checkbox" name="джемы">
               джемы
             </label>
-          </section>
+          </fieldset>
 
-          <section class="filter__item">
+          <fieldset class="filter__item">
             <label class="btn btn--filter">
               <input type="submit" value="Применить">
             </label>
-          </section>
+          </fieldset>
         </form>
       </section>
 
