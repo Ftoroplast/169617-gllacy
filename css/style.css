@@ -1,0 +1,23 @@
+body {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 100;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 60.35px;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Roboto Black", "Arial", sans-serif;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 41px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Roboto Bold", "Arial", sans-serif;
+}
