@@ -21,3 +21,34 @@ h2 {
   font-weight: 500;
   font-family: "Roboto Bold", "Arial", sans-serif;
 }
+
+.row {
+  font-size: 0;
+}
+
+p, span, a, div, section, label, li, form {
+  font-size: 16px;
+}
+
+.col {
+  display: inline-block;
+  padding: 0 10px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.s-1 {
+  width: 25%;
+}
+
+.s-2 {
+  width: 50%;
+}
+
+.s-3 {
+  width: 75%;
+}
+
+.s-4 {
+  width: 100%;
+}

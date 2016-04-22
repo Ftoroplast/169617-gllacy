@@ -8,15 +8,16 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <div class="logo logo--index">
-          <a href="index.html">
-            <img src="img/pic__logo--gllacy.svg" width="154" height="64" alt="Gllacy Shop">
-          </a>
-        </div>
-
-        <nav class="navigation">
+      <div class="container row">
+        <nav class="navigation col s-2">
           <ul class="navigation__list">
+            <li class="navigation__item">
+              <div class="logo logo--index">
+                <a href="index.html">
+                  <img src="img/pic__logo--gllacy.svg" width="154" height="64" alt="Gllacy Shop">
+                </a>
+              </div>
+            </li>
             <li class="navigation__item navigation__item--active">
               Каталог
             </li>
@@ -29,16 +30,18 @@
           </ul>
         </nav>
 
-        <div class="search">
-          <a class="btn btn--search" href="#">Поиск</a>
-        </div>
+        <div class="col s-2">
+          <div class="search">
+            <a class="btn btn--search" href="#">Поиск</a>
+          </div>
 
-        <div class="user">
-          <a class="btn btn--login" href="#">Вход</a>
-        </div>
+          <div class="user">
+            <a class="btn btn--login" href="#">Вход</a>
+          </div>
 
-        <div class="cart">
-          <a class="btn btn--full-cart" href="#">Корзина</a>
+          <div class="cart">
+            <a class="btn btn--empty-cart" href="#">Корзина</a>
+          </div>
         </div>
 
         <div class="worktime-phone-block">
@@ -51,7 +54,7 @@
     </header>
 
     <main class="container">
-      <ul class="breadcrumbs">
+      <ul class="breadcrumbs row">
         <li class="breadcrumbs__item">
           <a href="index.html">Главная</a>
         </li>
@@ -63,9 +66,9 @@
         </li>
       </ul>
 
-      <h1 class="page-title">Сливочное мороженое</h1>
+      <h1 class="page-title row">Сливочное мороженое</h1>
 
-      <section class="filter">
+      <section class="filter row">
         <form class="filter__form" action="#" method="POST">
           <fieldset class="filter__item">
             <legend class="filter__item-name">Сортировка:</legend>
@@ -144,102 +147,102 @@
         </form>
       </section>
 
-      <section class="products">
-        <article class="product">
-          <div class="product__image">
-            <img src="img/pic__product--cream_with_orange_marmalade_and_citrus_chips.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          </div>
-          <p class="product__price">310&#8381;<span>/кг</span></p>
-          <p class="product__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-        </article>
+      <section class="products row">
+        <div class="col s-1">
+          <article class="product">
+            <div class="product__image">
+              <img src="img/pic__product--cream_with_orange_marmalade_and_citrus_chips.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            </div>
+            <p class="product__price">310&#8381;<span>/кг</span></p>
+            <p class="product__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+          </article>
+          <article class="product">
+            <div class="product__image">
+              <img src="img/pic__product--сreamy_with_cranberry_jam.png" width="267" height="267" alt="Сливочное с брусничным джемом">
+            </div>
+            <p class="product__price">325&#8381;<span>/кг</span></p>
+            <p class="product__title">Сливочное с брусничным джемом</p>
+          </article>
+          <article class="product">
+            <div class="product__image">
+              <img src="img/pic__product--creamy_vanilla_with_chocolate_chips.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
+            </div>
+            <p class="product__price">440&#8381;<span>/кг</span></p>
+            <p class="product__title">Сливочно-ванильное с кусочками шоколада</p>
+          </article>
+        </div>
 
-        <article class="product">
-          <div class="product__image">
-            <img src="img/pic__product--creamy_coffee_with_chocolate_chips.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-          </div>
-          <p class="product__price">380&#8381;<span>/кг</span></p>
-          <p class="product__title">Сливочно-кофейное с кусочками шоколада</p>
-        </article>
+        <div class="col s-1">
+          <article class="product">
+            <div class="product__image">
+              <img src="img/pic__product--creamy_coffee_with_chocolate_chips.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+            </div>
+            <p class="product__price">380&#8381;<span>/кг</span></p>
+            <p class="product__title">Сливочно-кофейное с кусочками шоколада</p>
+          </article>
+          <article class="product">
+            <div class="product__image">
+              <img src="img/pic__product--creamy_blueberry_with_whole_blueberries.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
+            </div>
+            <p class="product__price">410&#8381;<span>/кг</span></p>
+            <p class="product__title">Сливочно-черничное с цельными ягодами черники</p>
+          </article>
+          <article class="product">
+            <div class="product__image">
+              <img src="img/pic__product--cream_with_menthol_syrup.png" width="267" height="267" alt="Сливочное с ментоловым сиропом">
+            </div>10
+            <p class="product__price">435&#8381;<span>/кг</span></p>
+            <p class="product__title">Сливочное с ментоловым сиропом</p>
+          </article>
+        </div>
 
-        <article class="product">
-          <div class="product__image">
-            <img src="img/pic__product--creamy_strawberry_with_sprinkles_of_white_chocolate.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-          </div>
-          <p class="product__price">355&#8381;<span>/кг</span></p>
-          <p class="product__title">Сливочно-клубничное с присыпкой из белого шоколада</p>
-        </article>
+        <div class="col s-1">
+          <article class="product">
+            <div class="product__image">
+              <img src="img/pic__product--creamy_strawberry_with_sprinkles_of_white_chocolate.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            </div>
+            <p class="product__price">355&#8381;<span>/кг</span></p>
+            <p class="product__title">Сливочно-клубничное с присыпкой из белого шоколада</p>
+          </article>
+          <article class="product">
+            <div class="product__image">
+              <img src="img/pic__product--creamy_lemon_with_caramel_grit.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
+            </div>
+            <p class="product__price">375&#8381;<span>/кг</span></p>
+            <p class="product__title">Сливочно-лимонное с карамельной присыпкой</p>
+          </article>
+          <article class="product">
+            <div class="product__image">
+              <img src="img/pic__product--creamy_with_pieces_of_dark_chocolate.png" width="267" height="267" alt="Сливочное с кусочками чёрного шоколада">
+            </div>
+            <p class="product__price">355&#8381;<span>/кг</span></p>
+            <p class="product__title">Сливочное с кусочками чёрного шоколада</p>
+          </article>
+        </div>
 
-        <article class="product">
-          <div class="product__image">
-            <img src="img/pic__product--сreamy_creme_brulee_with_caramel_sauce.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-          </div>
-          <p class="product__price">415&#8381;<span>/кг</span></p>
-          <p class="product__title">Сливочное крем-брюле с карамельной подливкой</p>
-        </article>
-
-        <article class="product">
-          <div class="product__image">
-            <img src="img/pic__product--сreamy_with_cranberry_jam.png" width="267" height="267" alt="Сливочное с брусничным джемом">
-          </div>
-          <p class="product__price">325&#8381;<span>/кг</span></p>
-          <p class="product__title">Сливочное с брусничным джемом</p>
-        </article>
-
-        <article class="product">
-          <div class="product__image">
-            <img src="img/pic__product--creamy_blueberry_with_whole_blueberries.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
-          </div>
-          <p class="product__price">410&#8381;<span>/кг</span></p>
-          <p class="product__title">Сливочно-черничное с цельными ягодами черники</p>
-        </article>
-
-        <article class="product">
-          <div class="product__image">
-            <img src="img/pic__product--creamy_lemon_with_caramel_grit.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
-          </div>
-          <p class="product__price">375&#8381;<span>/кг</span></p>
-          <p class="product__title">Сливочно-лимонное с карамельной присыпкой</p>
-        </article>
-
-        <article class="product">
-          <div class="product__image">
-            <img src="img/pic__product--cream_with_chocolate_chips.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
-          </div>
-          <p class="product__price">320&#8381;<span>/кг</span></p>
-          <p class="product__title">Сливочное с шоколадной стружкой</p>
-        </article>
-
-        <article class="product">
-          <div class="product__image">
-            <img src="img/pic__product--creamy_vanilla_with_chocolate_chips.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
-          </div>
-          <p class="product__price">440&#8381;<span>/кг</span></p>
-          <p class="product__title">Сливочно-ванильное с кусочками шоколада</p>
-        </article>
-
-        <article class="product">
-          <div class="product__image">
-            <img src="img/pic__product--cream_with_menthol_syrup.png" width="267" height="267" alt="Сливочное с ментоловым сиропом">
-          </div>10
-          <p class="product__price">435&#8381;<span>/кг</span></p>
-          <p class="product__title">Сливочное с ментоловым сиропом</p>
-        </article>
-
-        <article class="product">
-          <div class="product__image">
-            <img src="img/pic__product--creamy_with_pieces_of_dark_chocolate.png" width="267" height="267" alt="Сливочное с кусочками чёрного шоколада">
-          </div>
-          <p class="product__price">355&#8381;<span>/кг</span></p>
-          <p class="product__title">Сливочное с кусочками чёрного шоколада</p>
-        </article>
-
-        <article class="product">
-          <div class="product__image">
-            <img src="img/pic__product--butter_with_mint_syrup.png" width="267" height="267" alt="Сливочное с мятным сиропом">
-          </div>
-          <p class="product__price">420&#8381;<span>/кг</span></p>
-          <p class="product__title">Сливочное с мятным сиропом</p>
-        </article>
+        <div class="col s-1">
+          <article class="product">
+            <div class="product__image">
+              <img src="img/pic__product--сreamy_creme_brulee_with_caramel_sauce.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+            </div>
+            <p class="product__price">415&#8381;<span>/кг</span></p>
+            <p class="product__title">Сливочное крем-брюле с карамельной подливкой</p>
+          </article>
+          <article class="product">
+            <div class="product__image">
+              <img src="img/pic__product--cream_with_chocolate_chips.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
+            </div>
+            <p class="product__price">320&#8381;<span>/кг</span></p>
+            <p class="product__title">Сливочное с шоколадной стружкой</p>
+          </article>
+          <article class="product">
+            <div class="product__image">
+              <img src="img/pic__product--butter_with_mint_syrup.png" width="267" height="267" alt="Сливочное с мятным сиропом">
+            </div>
+            <p class="product__price">420&#8381;<span>/кг</span></p>
+            <p class="product__title">Сливочное с мятным сиропом</p>
+          </article>
+        </div>
 
         <div class="paginator">
           <ul class="paginator__list">
@@ -270,43 +273,35 @@
     </main>
 
     <footer>
-      <section class="social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__btn social__btn--tw" href="#">Twitter</a>
-          </li>
-          <li class="social__item">
-            <a class="social__btn social__btn--inst" href="#">Instagram</a>
-          </li>
-          <li class="social__item">
-            <a class="social__btn social__btn--fb" href="#">Facebook</a>
-          </li>
-          <li class="social__item">
-            <a class="social__btn social__btn--vk" href="#">Vkontakte</a>
-          </li>
-        </ul>
-      </section>
+      <div class="container row">
+        <section class="social col s-1">
+          <a class="social__btn social__btn--tw" href="#">Twitter</a>
+          <a class="social__btn social__btn--inst" href="#">Instagram</a>
+          <a class="social__btn social__btn--fb" href="#">Facebook</a>
+          <a class="social__btn social__btn--vk" href="#">Vkontakte</a>
+        </section>
 
-      <section class="footer-menu">
-        <ul class="footer-menu__list">
-          <li class="footer-menu__item">
-            <a href="#">Для поставщиков</a>
-          </li>
-          <li class="footer-menu__item">
-            <a href="#">Наши документы</a>
-          </li>
-          <li class="footer-menu__item">
-            <a href="#">О производстве</a>
-          </li>
-          <li class="footer-menu__item">
-            <a href="#">Экологические стандарты</a>
-          </li>
-        </ul>
-      </section>
+        <section class="footer-menu col s-2">
+          <ul class="footer-menu__list">
+            <li class="footer-menu__item">
+              <a href="#">Для поставщиков</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#">Наши документы</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#">О производстве</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#">Экологические стандарты</a>
+            </li>
+          </ul>
+        </section>
 
-      <section class="copyright">
-        <p class="copyright__text">Сделано в <a href="http://htmlacademy.ru/">HTML Academy</a> &copy; 2016</p>
-      </section>
+        <section class="copyright col s-1">
+          <p class="copyright__text">Сделано в <a href="http://htmlacademy.ru/">HTML Academy</a> &copy; 2016</p>
+        </section>
+      </div>
     </footer>
   </body>
 </html>

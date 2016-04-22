@@ -8,13 +8,14 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <div class="logo logo--index">
-          <img src="img/pic__logo--gllacy.svg" width="154" height="64" alt="Gllacy Shop">
-        </div>
-
-        <nav class="navigation">
+      <div class="container row">
+        <nav class="navigation col s-2">
           <ul class="navigation__list">
+            <li class="navigation__item">
+              <div class="logo logo--index">
+                <img src="img/pic__logo--gllacy.svg" width="154" height="64" alt="Gllacy Shop">
+              </div>
+            </li>
             <li class="navigation__item">
               <a href="catalog.html">Каталог</a>
             </li>
@@ -27,16 +28,18 @@
           </ul>
         </nav>
 
-        <div class="search">
-          <a class="btn btn--search" href="#">Поиск</a>
-        </div>
+        <div class="col s-2">
+          <div class="search">
+            <a class="btn btn--search" href="#">Поиск</a>
+          </div>
 
-        <div class="user">
-          <a class="btn btn--login" href="#">Вход</a>
-        </div>
+          <div class="user">
+            <a class="btn btn--login" href="#">Вход</a>
+          </div>
 
-        <div class="cart">
-          <a class="btn btn--empty-cart" href="#">Корзина</a>
+          <div class="cart">
+            <a class="btn btn--empty-cart" href="#">Корзина</a>
+          </div>
         </div>
 
         <div class="worktime-phone-block">
@@ -49,7 +52,7 @@
     </header>
 
     <main class="container">
-      <div class="slider">
+      <div class="slider row">
         <label class="slider__btn">
           <input type="radio" name="slider" checked>
         </label>
@@ -65,20 +68,22 @@
         </section>
       </div>
 
-      <div class="content content--offer">
-        <h2 class="content__title content__title--offer">Малинка даром!</h2>
-        <p class="content__description content__description--offer">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малиного варенья бесплатно.</p>
-        <a class="btn btn--offer" href="#">Хочу варенье!</a>
+      <div class="row">
+        <div class="content content--offer col s-2">
+          <h2 class="content__title content__title--offer">Малинка даром!</h2>
+          <p class="content__description content__description--offer">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малиного варенья бесплатно.</p>
+          <a class="btn btn--offer" href="#">Хочу варенье!</a>
+        </div>
+
+        <div class="content content--offer col s-2">
+          <h2 class="content__title content__title--offer">Шоколадки даром!</h2>
+          <p class="content__description content__description--offer">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <a class="btn btn--offer" href="#">Хочу шоколадки!</a>
+        </div>
       </div>
 
-      <div class="content content--offer">
-        <h2 class="content__title content__title--offer">Шоколадки даром!</h2>
-        <p class="content__description content__description--offer">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <a class="btn btn--offer" href="#">Хочу шоколадки!</a>
-      </div>
-
-      <section class="products">
-        <article class="product product--hit">
+      <section class="products row">
+        <article class="product product--hit col s-1">
           <div class="product__image">
             <img src="img/pic__product--cream_with_orange_marmalade_and_citrus_chips.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
           </div>
@@ -86,7 +91,7 @@
           <p class="product__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
         </article>
 
-        <article class="product product--hit">
+        <article class="product product--hit col s-1">
           <div class="product__image">
             <img src="img/pic__product--creamy_coffee_with_chocolate_chips.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
           </div>
@@ -94,7 +99,7 @@
           <p class="product__title">Сливочно-кофейное с кусочками шоколада</p>
         </article>
 
-        <article class="product product--hit">
+        <article class="product product--hit col s-1">
           <div class="product__image">
             <img src="img/pic__product--creamy_strawberry_with_sprinkles_of_white_chocolate.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
           </div>
@@ -102,7 +107,7 @@
           <p class="product__title">Сливочно-клубничное с присыпкой из белого шоколада</p>
         </article>
 
-        <article class="product product--hit">
+        <article class="product product--hit col s-1">
           <div class="product__image">
             <img src="img/pic__product--сreamy_creme_brulee_with_caramel_sauce.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
           </div>
@@ -111,7 +116,7 @@
         </article>
       </section>
 
-      <div class="content content--about">
+      <div class="content content--about row">
         <h2 class="content__title content__title--about">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
         <ul class="content__list content__list--about">
           <li class="content__item content__item--about">
@@ -131,25 +136,27 @@
         </ul>
       </div>
 
-      <div class="content content--news">
-        <h3 class="content__title content__title--news">Новое в нашем блоге</h3>
-        <a class="content__link content__link--news" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+      <div class="row">
+        <div class="content content--news col s-2">
+          <h3 class="content__title content__title--news">Новое в нашем блоге</h3>
+          <a class="content__link content__link--news" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+        </div>
+
+        <div class="content content--subscription col s-2">
+          <p class="content__description content__description--subscription">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас проиходит.
+            Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+          <form action="#" class="content__form content__form--subscription">
+            <label class="content__field content__field--subscription">
+              <input type="email" name="e-mail" placeholder="Электронная почта">
+            </label>
+            <label class="btn btn--subscription">
+              <input type="submit" value="Отправить">
+            </label>
+          </form>
+        </div>
       </div>
 
-      <div class="content content--subscription">
-        <p class="content__description content__description--subscription">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас проиходит.
-          Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-        <form action="#" class="content__form content__form--subscription">
-          <label class="content__field content__field--subscription">
-            <input type="email" name="e-mail" placeholder="Электронная почта">
-          </label>
-          <label class="btn btn--subscription">
-            <input type="submit" value="Отправить">
-          </label>
-        </form>
-      </div>
-
-      <section class="contacts">
+      <section class="contacts row">
         <div class="contacts__map">
           <div class="contacts__info">
             <p class="contacts__text">Адрес главного офиса и офлайн магазина:</p>
@@ -163,16 +170,18 @@
           </div>
         </div>
       </section>
+    </main>
 
-      <footer>
-        <section class="social">
+    <footer>
+      <div class="container row">
+        <section class="social col s-1">
           <a class="social__btn social__btn--tw" href="#">Twitter</a>
           <a class="social__btn social__btn--inst" href="#">Instagram</a>
           <a class="social__btn social__btn--fb" href="#">Facebook</a>
           <a class="social__btn social__btn--vk" href="#">Vkontakte</a>
         </section>
 
-        <section class="footer-menu">
+        <section class="footer-menu col s-2">
           <ul class="footer-menu__list">
             <li class="footer-menu__item">
               <a href="#">Для поставщиков</a>
@@ -189,10 +198,10 @@
           </ul>
         </section>
 
-        <section class="copyright">
+        <section class="copyright col s-1">
           <p class="copyright__text">Сделано в <a href="http://htmlacademy.ru/">HTML Academy</a> &copy; 2016</p>
         </section>
-      </footer>
-    </main>
+      </div>
+    </footer>
   </body>
 </html>
