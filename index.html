@@ -28,19 +28,19 @@
           </ul>
         </nav>
 
-        <div class="col s-2">
-          <div class="search">
+        <ul class="user-block col s-2">
+          <li class="user-block__item user-block__item--search">
             <a class="btn btn--search" href="#">Поиск</a>
-          </div>
+          </li>
 
-          <div class="user">
+          <li class="user-block__item user-block__item--login">
             <a class="btn btn--login" href="#">Вход</a>
-          </div>
+          </li>
 
-          <div class="cart">
+          <li class="user-block__item user-block__item--cart">
             <a class="btn btn--empty-cart" href="#">Корзина</a>
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <div class="worktime-phone-block">
           <p class="worktime-phone-block__worktime">С 10 до 20, ежедневно</p>
@@ -52,21 +52,21 @@
     </header>
 
     <main class="container">
-      <div class="slider row">
-        <label class="slider__btn">
-          <input type="radio" name="slider" checked>
-        </label>
-        <label class="slider__btn">
-          <input  type="radio" name="slider">
-        </label>
-        <label class="slider__btn">
-          <input  type="radio" name="slider">
-        </label>
-        <section class="main-offer">
-          <h2 class="main-offer__title">Крем-брюле и пломбир с малиновым джемом</h2>
-          <a class="btn btn--main-offer" href="#">Давайте оба!</a>
-        </section>
-      </div>
+      <section class="main-offer row">
+        <h2 class="main-offer__title">Крем-брюле и пломбир с малиновым джемом</h2>
+        <a class="btn btn--main-offer" href="#">Давайте оба!</a>
+        <div class="slider">
+          <label class="slider__btn">
+            <input type="radio" name="slider" checked>
+          </label>
+          <label class="slider__btn">
+            <input  type="radio" name="slider">
+          </label>
+          <label class="slider__btn">
+            <input  type="radio" name="slider">
+          </label>
+        </div>
+      </section>
 
       <div class="row">
         <div class="content content--offer col s-2">
@@ -86,32 +86,32 @@
         <article class="product product--hit col s-1">
           <div class="product__image">
             <img src="img/pic__product--cream_with_orange_marmalade_and_citrus_chips.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <p class="product__price">310&#8381;<span>/кг</span></p>
           </div>
-          <p class="product__price">310&#8381;<span>/кг</span></p>
           <p class="product__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
         </article>
 
         <article class="product product--hit col s-1">
           <div class="product__image">
             <img src="img/pic__product--creamy_coffee_with_chocolate_chips.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+            <p class="product__price">380&#8381;<span>/кг</span></p>
           </div>
-          <p class="product__price">380&#8381;<span>/кг</span></p>
           <p class="product__title">Сливочно-кофейное с кусочками шоколада</p>
         </article>
 
         <article class="product product--hit col s-1">
           <div class="product__image">
             <img src="img/pic__product--creamy_strawberry_with_sprinkles_of_white_chocolate.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <p class="product__price">355&#8381;<span>/кг</span></p>
           </div>
-          <p class="product__price">355&#8381;<span>/кг</span></p>
           <p class="product__title">Сливочно-клубничное с присыпкой из белого шоколада</p>
         </article>
 
         <article class="product product--hit col s-1">
           <div class="product__image">
             <img src="img/pic__product--сreamy_creme_brulee_with_caramel_sauce.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+            <p class="product__price">415&#8381;<span>/кг</span></p>
           </div>
-          <p class="product__price">415&#8381;<span>/кг</span></p>
           <p class="product__title">Сливочное крем-брюле с карамельной подливкой</p>
         </article>
       </section>
@@ -157,17 +157,15 @@
       </div>
 
       <section class="contacts row">
-        <div class="contacts__map">
-          <div class="contacts__info">
-            <p class="contacts__text">Адрес главного офиса и офлайн магазина:</p>
-            <p class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-            <p class="contacts__text">Для заказов по телефону:</p>
-            <p class="contacts__phone">
-              <a href="tel:88124502525">8 812 450-25-25</a>
-            </p>
-            <p class="contacts__text">(с 10 до 20 ежедневно)</p>
-            <a class="btn btn--contacts" href="#">Форма обратной связи</a>
-          </div>
+        <div class="contacts__info">
+          <p class="contacts__text">Адрес главного офиса и офлайн магазина:</p>
+          <p class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+          <p class="contacts__text">Для заказов по телефону:</p>
+          <p class="contacts__phone">
+            <a href="tel:88124502525">8 812 450-25-25</a>
+          </p>
+          <p class="contacts__text">(с 10 до 20 ежедневно)</p>
+          <a class="btn btn--contacts" href="#">Форма обратной связи</a>
         </div>
       </section>
     </main>
@@ -175,10 +173,20 @@
     <footer>
       <div class="container row">
         <section class="social col s-1">
-          <a class="social__btn social__btn--tw" href="#">Twitter</a>
-          <a class="social__btn social__btn--inst" href="#">Instagram</a>
-          <a class="social__btn social__btn--fb" href="#">Facebook</a>
-          <a class="social__btn social__btn--vk" href="#">Vkontakte</a>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__btn social__btn--tw" href="#">Twitter</a>
+            </li>
+            <li class="social__item">
+              <a class="social__btn social__btn--inst" href="#">Instagram</a>
+            </li>
+            <li class="social__item">
+              <a class="social__btn social__btn--fb" href="#">Facebook</a>
+            </li>
+            <li class="social__item">
+              <a class="social__btn social__btn--vk" href="#">Vkontakte</a>
+            </li>
+          </ul>
         </section>
 
         <section class="footer-menu col s-2">

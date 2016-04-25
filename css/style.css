@@ -1,4 +1,9 @@
 body {
+  min-width: 900px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+
   font-size: 16px;
   line-height: 24px;
   color: #000000;
@@ -26,10 +31,6 @@ h2 {
   font-size: 0;
 }
 
-p, span, a, div, section, label, li, form {
-  font-size: 16px;
-}
-
 .col {
   display: inline-block;
   padding: 0 10px;
@@ -51,4 +52,135 @@ p, span, a, div, section, label, li, form {
 
 .s-4 {
   width: 100%;
+}
+
+header {
+  position: relative;
+}
+
+.navigation__item {
+  display: inline-block;
+  margin-right: 10px;
+  list-style: none;
+  vertical-align: middle;
+}
+
+.user-block {
+  text-align: right;
+}
+
+.user-block__item {
+  display: inline-block;
+  margin-right: 10px;
+  list-style:none;
+}
+
+.worktime-phone-block {
+  position: absolute;
+  top: 90px;
+  right: 0;
+}
+
+.main-offer {
+  position: relative;
+  text-align: center;
+}
+
+.slider {
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+
+.btn--offer {
+  display: block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.product__image {
+  position: relative;
+}
+
+.product__price {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.product__title {
+  text-align: center;
+}
+
+.content__item--about {
+  display: inline-block;
+  width: 50%;
+  list-style: none;
+}
+
+.contacts {
+  margin: 0 -10px;
+}
+
+.contacts::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contacts__info {
+  float: right;
+  width: 35%;
+  margin: 20px 0;
+}
+
+.social__item {
+  display: inline-block;
+  margin-right: 10px;
+  list-style: none;
+}
+
+.footer-menu {
+  font-size: 0;
+}
+
+.footer-menu__item {
+  display: inline-block;
+  width: 50%;
+  list-style: none;
+}
+
+.breadcrumbs__item {
+  display: inline-block;
+  margin-right: 10px;
+  list-style: none;
+}
+
+.filter {
+  width: 75%;
+  margin-bottom: 20px;
+}
+
+.filter__item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.paginator {
+  text-align: right;
+}
+
+.paginator__item {
+  display: inline-block;
+  margin-right: 10px;
+  list-style: none;
+}
+
+.page-title {
+  font-size: 30px;
+}
+
+p, span, a, div, section, label, li, form {
+  font-size: 16px;
 }
