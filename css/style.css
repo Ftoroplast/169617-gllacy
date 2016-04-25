@@ -1,9 +1,4 @@
 body {
-  min-width: 900px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
-
   font-size: 16px;
   line-height: 24px;
   color: #000000;
@@ -25,6 +20,14 @@ h2 {
   color: #ffffff;
   font-weight: 500;
   font-family: "Roboto Bold", "Arial", sans-serif;
+}
+
+.container {
+  position: relative;
+  min-width: 900px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .row {
