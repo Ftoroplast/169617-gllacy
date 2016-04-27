@@ -29,37 +29,50 @@ h2 {
 
 .container {
   position: relative;
+  box-sizing: border-box;
   min-width: 900px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 .row {
   font-size: 0;
 }
 
-.col {
+.row__col {
   display: inline-block;
-  padding: 0 10px;
-  box-sizing: border-box;
+  margin-right: 2.2%;
   vertical-align: top;
 }
 
-.s-1 {
-  width: 25%;
+.container .row .row__col:first-of-type {
+  margin-left: 2.3%;
 }
 
-.s-2 {
-  width: 50%;
+.container .row .row__col:last-of-type {
+  margin-right: 2.3%;
 }
 
-.s-3 {
-  width: 75%;
+.row__col--s1 {
+  width: 22.2%;
 }
 
-.s-4 {
-  width: 100%;
+.row__col--s2 {
+  width: 46.6%;
+}
+
+.row__col--s3 {
+  width: 71%;
+}
+
+.row__col--s4 {
+  width: 95.4%;
+}
+
+.navigation {
+  min-width: 44.4%;
+  max-width: 66.6%;
+  width: auto;
 }
 
 .navigation__item {
@@ -70,7 +83,16 @@ h2 {
 }
 
 .user-block {
+  float: right;
+  min-width: 22.2%;
+  max-width: 44.4%;
   text-align: right;
+}
+
+.user-block::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .user-block__item {
@@ -81,8 +103,9 @@ h2 {
 
 .worktime-phone-block {
   position: absolute;
-  top: 90px;
+  top: 100%;
   right: 0;
+  margin-right: 2.3%;
 }
 
 .main-offer {
@@ -92,7 +115,7 @@ h2 {
 
 .slider {
   position: absolute;
-  top: 80px;
+  bottom: 0;
   left: 0;
 }
 
@@ -117,10 +140,23 @@ h2 {
   text-align: center;
 }
 
+.content__list--about {
+  font-size: 0;
+}
+
 .content__item--about {
-  display: inline-block;
-  width: 50%;
+  font-size: 0;
   list-style: none;
+}
+
+.content__text--about {
+  display: inline-block;
+  width: 48.72%;
+  vertical-align: top;
+}
+
+.content__item--about > .content__text--about:first-of-type {
+  margin-right: 2.56%;
 }
 
 .contacts {
@@ -183,6 +219,10 @@ h2 {
 
 .page-title {
   font-size: 30px;
+}
+
+.copyright {
+  text-align: right;
 }
 
 p, span, a, div, section, label, li, form {
