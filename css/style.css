@@ -1,9 +1,5 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 body {
+  min-width: 900px;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
@@ -35,37 +31,41 @@ h2 {
   margin: 0 auto;
 }
 
-.row {
-  font-size: 0;
-}
-
-.row__column {
+.column {
   display: inline-block;
   margin-right: 2.2%;
   vertical-align: top;
 }
 
-.container .row .row__column:first-of-type {
-  margin-left: 2.3%;
+.reset-font-size {
+  font-size: 0;
 }
 
-.container .row .row__column:last-of-type {
+.edge-margin {
+  margin: 0 2.3%;
+}
+
+.edge-margin-right {
   margin-right: 2.3%;
 }
 
-.row__column--size1 {
+.edge-margin-left {
+  margin-left: 2.3%;
+}
+
+.column--size1 {
   width: 22.2%;
 }
 
-.row__column--size2 {
+.column--size2 {
   width: 46.6%;
 }
 
-.row__column--size3 {
+.column--size3 {
   width: 71%;
 }
 
-.row__column--size4 {
+.column--size4 {
   width: 95.4%;
 }
 
@@ -106,7 +106,6 @@ h2 {
   position: absolute;
   top: 100%;
   right: 0;
-  margin-right: 2.3%;
 }
 
 .main-offer {
@@ -146,8 +145,8 @@ h2 {
   vertical-align: top;
 }
 
-.row > .content__text--about:first-of-type {
-  margin-right: 2.56%;
+.content .content__text--about:nth-of-type(odd) {
+  margin-right: 2%;
 }
 
 .contacts {
@@ -166,22 +165,14 @@ h2 {
   margin: 20px 0;
 }
 
-footer .row__column {
+footer .column {
   vertical-align: middle;
-}
-
-.social {
-  font-size: 0;
 }
 
 .social__item {
   display: inline-block;
   margin-right: 10px;
   list-style: none;
-}
-
-.footer-menu {
-  font-size: 0;
 }
 
 .footer-menu__item {
@@ -232,6 +223,6 @@ footer .row__column {
   background-repeat: no-repeat;
 }
 
-p, span, a, div, section, label, li, form {
+p, span, a, div, section, label, li, form, fieldset {
   font-size: 16px;
 }
