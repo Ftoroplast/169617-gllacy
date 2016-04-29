@@ -9,13 +9,11 @@
   <body>
     <header>
       <div class="container clearfix">
-        <nav class="navigation column edge-margin-left">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <div class="logo logo--index">
-                <img src="img/pic__logo--gllacy.svg" width="154" height="64" alt="Gllacy Shop">
-              </div>
-            </li>
+        <div class="logo logo--index edge-margin-left">
+          <img src="img/pic__logo--gllacy.svg" width="154" height="64" alt="Gllacy Shop">
+        </div>
+        <nav class="navigation">
+          <ul class="navigation__list reset-font-size">
             <li class="navigation__item">
               <a href="catalog.html">Каталог</a>
             </li>
@@ -28,7 +26,7 @@
           </ul>
         </nav>
 
-        <ul class="user-block column edge-margin-right">
+        <ul class="user-block edge-margin-right reset-font-size">
           <li class="user-block__item user-block__item--search">
             <a class="btn btn--search" href="#">Поиск</a>
           </li>
@@ -53,7 +51,7 @@
 
     <main>
       <div class="container reset-font-size">
-        <section class="main-offer column column--size4 edge-margin">
+        <section class="main-offer column column--size4 edge-margin-both">
           <h2 class="main-offer__title">Крем-брюле и пломбир с малиновым джемом</h2>
           <a class="btn btn--main-offer" href="#">Давайте оба!</a>
           <div class="slider">
@@ -115,7 +113,7 @@
           </article>
         </section>
 
-        <div class="content content--about column column--size4 edge-margin">
+        <div class="content content--about edge-margin-both reset-font-size">
           <h2 class="content__title content__title--about">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
           <p class="content__text content__text--about">Всё наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
           <p class="content__text content__text--about">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
@@ -143,18 +141,16 @@
           </form>
         </div>
 
-        <section class="map">
-          <div class="contacts column column--size4 edge-margin-right">
-            <div class="contacts__info">
-              <p class="contacts__text">Адрес главного офиса и офлайн магазина:</p>
-              <p class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-              <p class="contacts__text">Для заказов по телефону:</p>
-              <p class="contacts__phone">
-                <a href="tel:88124502525">8 812 450-25-25</a>
-              </p>
-              <p class="contacts__text">(с 10 до 20 ежедневно)</p>
-              <a class="btn btn--contacts" href="#">Форма обратной связи</a>
-            </div>
+        <section class="map clearfix">
+          <div class="contacts edge-margin-right">
+            <p class="contacts__text">Адрес главного офиса и офлайн магазина:</p>
+            <p class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+            <p class="contacts__text">Для заказов по телефону:</p>
+            <p class="contacts__phone">
+              <a href="tel:88124502525">8 812 450-25-25</a>
+            </p>
+            <p class="contacts__text">(с 10 до 20 ежедневно)</p>
+            <a class="btn btn--contacts" href="#">Форма обратной связи</a>
           </div>
         </section>
       </div>

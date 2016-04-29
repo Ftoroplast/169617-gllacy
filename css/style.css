@@ -25,7 +25,6 @@ h2 {
 
 .container {
   position: relative;
-  box-sizing: border-box;
   min-width: 900px;
   max-width: 1200px;
   margin: 0 auto;
@@ -41,7 +40,7 @@ h2 {
   font-size: 0;
 }
 
-.edge-margin {
+.edge-margin-both {
   margin: 0 2.3%;
 }
 
@@ -67,6 +66,10 @@ h2 {
 
 .column--size4 {
   width: 95.4%;
+}
+
+.logo {
+  float: left;
 }
 
 .navigation {
@@ -141,28 +144,16 @@ h2 {
 
 .content__text--about {
   display: inline-block;
-  width: 48.72%;
+  width: 48.9%;
   vertical-align: top;
 }
 
 .content .content__text--about:nth-of-type(odd) {
-  margin-right: 2%;
+  margin-right: 2.2%;
 }
 
 .contacts {
-  margin: 0 -10px;
-}
-
-.contacts::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.contacts__info {
   float: right;
-  width: 35%;
-  margin: 20px 0;
 }
 
 footer .column {
