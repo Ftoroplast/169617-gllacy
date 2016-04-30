@@ -69,18 +69,18 @@
 
         <section class="filter">
           <form class="filter__form" action="#" method="POST">
-            <fieldset class="filter__item">
-              <legend class="filter__item-name">Сортировка:</legend>
+            <section class="filter__item">
+              <p class="filter__item-name">Сортировка:</p>
               <label class="filter__field">
                 <select name="Сортировка" size="1">
                   <option value="по популярности">по популярности</option>
                   <option value="по цене">по цене</option>
                 </select>
               </label>
-            </fieldset>
+            </section>
 
-            <fieldset class="filter__item">
-              <legend class="filter__item-name">Цена: 100р. - 500р.</legend>
+            <section class="filter__item">
+              <p class="filter__item-name">Цена: 100р. - 500р.</p>
               <div class="range-filter">
                 <div class="range-filter__controls">
                   <div class="range-filter__scale">
@@ -92,10 +92,10 @@
                 <input type="text" name="min-price" value="100" hidden>
                 <input type="text" name="max-price" value="500" hidden>
               </div>
-            </fieldset>
+            </section>
 
-            <fieldset class="filter__item">
-              <legend class="filter__item-name">Жирность:</legend>
+            <section class="filter__item">
+              <p class="filter__item-name">Жирность:</p>
               <label class="filter__field">
                 <input type="radio" name="Жирность" value="0%">
                 0%
@@ -112,10 +112,10 @@
                 <input type="radio" name="Жирность" value="выше 30%">
                 выше 30%
               </label>
-            </fieldset>
+            </section>
 
-            <fieldset class="filter__item">
-              <legend class="filter__item-name">Наполнители:</legend>
+            <section class="filter__item">
+              <p class="filter__item-name">Наполнители:</p>
               <label class="filter__field">
                 <input type="checkbox" name="шоколадные" checked>
                 шоколадные
@@ -136,39 +136,39 @@
                 <input type="checkbox" name="джемы">
                 джемы
               </label>
-            </fieldset>
+            </section>
 
-            <fieldset class="filter__item">
+            <section class="filter__item">
               <label class="btn btn--filter">
                 <input type="submit" value="Применить">
               </label>
-            </fieldset>
+            </section>
           </form>
         </section>
 
         <section class="products">
-          <article class="product column column--x1">
+          <article class="product column column--one-quarter">
             <div class="product__image">
               <img src="img/pic__product--cream_with_orange_marmalade_and_citrus_chips.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <p class="product__price">310&#8381;<span>/кг</span></p>
             </div>
             <p class="product__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
           </article>
-          <article class="product column column--x1">
+          <article class="product column column--one-quarter">
             <div class="product__image">
               <img src="img/pic__product--creamy_coffee_with_chocolate_chips.png" alt="Сливочно-кофейное с кусочками шоколада">
               <p class="product__price">380&#8381;<span>/кг</span></p>
             </div>
             <p class="product__title">Сливочно-кофейное с кусочками шоколада</p>
           </article>
-          <article class="product column column--x1">
+          <article class="product column column--one-quarter">
             <div class="product__image">
               <img src="img/pic__product--creamy_strawberry_with_sprinkles_of_white_chocolate.png" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               <p class="product__price">355&#8381;<span>/кг</span></p>
             </div>
             <p class="product__title">Сливочно-клубничное с присыпкой из белого шоколада</p>
           </article>
-          <article class="product column column--x1">
+          <article class="product column column--one-quarter">
             <div class="product__image">
               <img src="img/pic__product--сreamy_creme_brulee_with_caramel_sauce.png" alt="Сливочное крем-брюле с карамельной подливкой">
               <p class="product__price">415&#8381;<span>/кг</span></p>
@@ -176,28 +176,28 @@
             <p class="product__title">Сливочное крем-брюле с карамельной подливкой</p>
           </article>
 
-          <article class="product column column--x1">
+          <article class="product column column--one-quarter">
             <div class="product__image">
               <img src="img/pic__product--сreamy_with_cranberry_jam.png" alt="Сливочное с брусничным джемом">
               <p class="product__price">325&#8381;<span>/кг</span></p>
             </div>
             <p class="product__title">Сливочное с брусничным джемом</p>
           </article>
-          <article class="product column column--x1">
+          <article class="product column column--one-quarter">
             <div class="product__image">
               <img src="img/pic__product--creamy_blueberry_with_whole_blueberries.png" alt="Сливочно-черничное с цельными ягодами черники">
               <p class="product__price">410&#8381;<span>/кг</span></p>
             </div>
             <p class="product__title">Сливочно-черничное с цельными ягодами черники</p>
           </article>
-          <article class="product column column--x1">
+          <article class="product column column--one-quarter">
             <div class="product__image">
               <img src="img/pic__product--creamy_lemon_with_caramel_grit.png" alt="Сливочно-лимонное с карамельной присыпкой">
               <p class="product__price">375&#8381;<span>/кг</span></p>
             </div>
             <p class="product__title">Сливочно-лимонное с карамельной присыпкой</p>
           </article>
-          <article class="product column column--x1">
+          <article class="product column column--one-quarter">
             <div class="product__image">
               <img src="img/pic__product--cream_with_chocolate_chips.png" alt="Сливочное с шоколадной стружкой">
               <p class="product__price">320&#8381;<span>/кг</span></p>
@@ -205,28 +205,28 @@
             <p class="product__title">Сливочное с шоколадной стружкой</p>
           </article>
 
-          <article class="product column column--x1">
+          <article class="product column column--one-quarter">
             <div class="product__image">
               <img src="img/pic__product--creamy_vanilla_with_chocolate_chips.png" alt="Сливочно-ванильное с кусочками шоколада">
               <p class="product__price">440&#8381;<span>/кг</span></p>
             </div>
             <p class="product__title">Сливочно-ванильное с кусочками шоколада</p>
           </article>
-          <article class="product column column--x1">
+          <article class="product column column--one-quarter">
             <div class="product__image">
               <img src="img/pic__product--cream_with_menthol_syrup.png" alt="Сливочное с ментоловым сиропом">
               <p class="product__price">435&#8381;<span>/кг</span></p>
             </div>
             <p class="product__title">Сливочное с ментоловым сиропом</p>
           </article>
-          <article class="product column column--x1">
+          <article class="product column column--one-quarter">
             <div class="product__image">
               <img src="img/pic__product--creamy_with_pieces_of_dark_chocolate.png" alt="Сливочное с кусочками чёрного шоколада">
               <p class="product__price">355&#8381;<span>/кг</span></p>
             </div>
             <p class="product__title">Сливочное с кусочками чёрного шоколада</p>
           </article>
-          <article class="product column column--x1">
+          <article class="product column column--one-quarter">
             <div class="product__image">
               <img src="img/pic__product--butter_with_mint_syrup.png" alt="Сливочное с мятным сиропом">
               <p class="product__price">420&#8381;<span>/кг</span></p>
@@ -264,8 +264,8 @@
     </main>
 
     <footer>
-      <div class="container">
-        <section class="social column column--x1">
+      <div class="container container--footer">
+        <section class="social column column--footer column--one-quarter">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__btn social__btn--tw" href="#">Twitter</a>
@@ -282,7 +282,7 @@
           </ul>
         </section>
 
-        <section class="footer-menu column column--x2">
+        <section class="footer-menu column column--footer column--two-quarters">
           <ul class="footer-menu__list">
             <li class="footer-menu__item">
               <a href="#">Для поставщиков</a>
@@ -299,7 +299,7 @@
           </ul>
         </section>
 
-        <section class="copyright column column--x1">
+        <section class="copyright column column--footer column--one-quarter">
           <div class="copyright__logo">
             <img src="img/pic__logo--htmlacademy.svg" width="110" height="40" alt="HTML Academy">
           </div>
