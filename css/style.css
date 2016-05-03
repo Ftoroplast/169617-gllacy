@@ -75,8 +75,18 @@ img {
 }
 
 .btn {
-  display: block;
+  display: inline-block;
   box-sizing: border-box;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 100;
+  font-family: "Roboto", "Arial", sans-serif;
+
+  border-radius: 20px;
+  background-color: #eb553a;
+  box-shadow: 0 1px 1px 0 #ac5a49;
 }
 
 header {
@@ -101,7 +111,7 @@ header {
 
 .navigation__item {
   display: inline-block;
-  margin-right: 13px;
+  margin-right: 2px;
 
   vertical-align: top;
 }
@@ -214,6 +224,9 @@ a.navigation__link:active::before {
   background-repeat: no-repeat;
 
   border-radius: 50%;
+  box-shadow: none;
+
+  font-size: 0;
 }
 
 .btn--search:hover {
@@ -224,22 +237,21 @@ a.navigation__link:active::before {
 .btn--login {
   position: relative;
 
-  width: 95px;
+  width: 90px;
   min-height: 32px;
   padding: 7px 15px;
   padding-left: 45px;
+  padding-top: 8px;
 
   font-size: 14px;
   line-height: 16px;
-  color: #ffffff;
   font-weight: 500;
   font-family: "Roboto Medium", "Arial", sans-serif;
   text-decoration: none;
   text-align: left;
 
   background-color: #a1b5aa;
-
-  border-radius: 20px;
+  box-shadow: none;
 }
 
 .btn--login::before {
@@ -268,22 +280,20 @@ a.navigation__link:active::before {
 .btn--cart {
   position: relative;
 
-  width: 120px;
+  width: 116px;
   min-height: 32px;
   padding: 7px 15px;
   padding-left: 45px;
-
+  padding-top: 8px;
   font-size: 14px;
   line-height: 16px;
-  color: #ffffff;
   font-weight: 500;
   font-family: "Roboto Medium", "Arial", sans-serif;
   text-decoration: none;
   text-align: left;
 
   background-color: #a1b5aa;
-
-  border-radius: 20px;
+  box-shadow: none;
 }
 
 .btn--cart::before {
@@ -328,13 +338,72 @@ a.navigation__link:active::before {
 
 .worktime-phone-block {
   position: absolute;
-  top: 100%;
+  top: 63px;
   right: 0;
+
+  text-align: right;
+}
+
+.worktime-phone-block__worktime {
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Roboto Bold", "Arial", sans-serif;
+}
+
+.worktime-phone-block__phone a {
+  font-size: 22px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Roboto Black", "Arial", sans-serif;
+  text-decoration: none;
 }
 
 .main-offer {
   position: relative;
+  width: 647px;
+  height: 584px;
+  margin: 0 auto;
+
+  background-image: url("../img/bg__main-offer--ice-cream.png");
+  background-position: center;
+  background-repeat: none;
+  background-size: 647px 584px;
+
   text-align: center;
+}
+
+.main-offer__title {
+  position: absolute;
+  left: -15px;
+  right: -15px;
+  top: 315px;
+
+  font-size: 60px;
+  line-height: 60px;
+  color: #ffffff;
+  font-family: "Roboto Black", "Arial", sans-serif;
+}
+
+.btn--main-offer {
+  position: absolute;
+  left: 50%;
+  top: 460px;
+
+  padding: 10px 40px;
+
+  font-size: 32px;
+  line-height: 44px;
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  text-decoration: none;
+
+  border-radius: 40px;
+
+  transform: translateX(-50%);
 }
 
 .slider {
