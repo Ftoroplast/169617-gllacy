@@ -83,14 +83,16 @@ img {
   color: #ffffff;
   font-weight: 100;
   font-family: "Roboto", "Arial", sans-serif;
+  text-shadow: 2px 2px 1px #ca3f26;
 
   border-radius: 20px;
-  background-color: #eb553a;
-  box-shadow: 0 1px 1px 0 #ac5a49;
+  background-image: linear-gradient(to bottom, #f26843, #e74b36);
+  box-shadow: 0 2px 2px 0 #ac5a49;
 }
 
 header {
   padding-top: 10px;
+  margin-bottom: 5px;
 }
 
 .logo {
@@ -227,6 +229,7 @@ a.navigation__link:active::before {
   box-shadow: none;
 
   font-size: 0;
+  text-shadow: none;
 }
 
 .btn--search:hover {
@@ -249,8 +252,10 @@ a.navigation__link:active::before {
   font-family: "Roboto Medium", "Arial", sans-serif;
   text-decoration: none;
   text-align: left;
+  text-shadow: none;
 
   background-color: #a1b5aa;
+  background-image: none;
   box-shadow: none;
 }
 
@@ -291,8 +296,10 @@ a.navigation__link:active::before {
   font-family: "Roboto Medium", "Arial", sans-serif;
   text-decoration: none;
   text-align: left;
+  text-shadow: none;
 
   background-color: #a1b5aa;
+  background-image: none;
   box-shadow: none;
 }
 
@@ -340,6 +347,7 @@ a.navigation__link:active::before {
   position: absolute;
   top: 63px;
   right: 0;
+  z-index: 1;
 
   text-align: right;
 }
@@ -365,28 +373,31 @@ a.navigation__link:active::before {
 
 .main-offer {
   position: relative;
-  width: 647px;
   height: 584px;
-  margin: 0 auto;
 
-  background-image: url("../img/bg__main-offer--ice-cream.png");
+  background-image: url("../img/bg__main-offer--ice-cream.png"),
+                    linear-gradient(to right, #849d8f, transparent 50%, #849d8f),
+                    linear-gradient(to top, transparent, #caf0dc 50%, transparent);
   background-position: center;
-  background-repeat: none;
-  background-size: 647px 584px;
+  background-repeat: no-repeat;
+  background-size: 647px 584px, cover, cover;
 
   text-align: center;
 }
 
 .main-offer__title {
   position: absolute;
-  left: -15px;
-  right: -15px;
-  top: 315px;
+  left: 50%;
+  top: 310px;
+
+  width: 670px;
 
   font-size: 60px;
   line-height: 60px;
   color: #ffffff;
   font-family: "Roboto Black", "Arial", sans-serif;
+
+  transform: translateX(-50%);
 }
 
 .btn--main-offer {
@@ -394,10 +405,11 @@ a.navigation__link:active::before {
   left: 50%;
   top: 460px;
 
-  padding: 10px 40px;
+  padding: 10px 35px;
 
   font-size: 32px;
   line-height: 44px;
+  font-weight: 600;
   font-family: "Roboto Bold", "Arial", sans-serif;
   text-decoration: none;
 
@@ -408,8 +420,24 @@ a.navigation__link:active::before {
 
 .slider {
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 80px;
+}
+
+.slider__btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[name="slider"]:checked + .slider__btn {
+  background-color: #ffffff;
 }
 
 .banners {
