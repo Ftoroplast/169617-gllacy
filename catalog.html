@@ -57,9 +57,11 @@
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
             <a class="link link--light link--breadcrumbs" href="index.html">Главная</a>
+            <span>&#187;</span>
           </li>
           <li class="breadcrumbs__item">
             <a class="link link--light link--breadcrumbs" href="catalog.html">Каталог</a>
+            <span>&#187;</span>
           </li>
           <li class="breadcrumbs__item breadcrumbs__item--active">
             Сливочное
@@ -72,12 +74,9 @@
           <form class="filter__form" action="#" method="POST">
             <section class="filter__item">
               <p class="filter__item-name">Сортировка:</p>
-              <label class="filter__field">
-                <select name="Сортировка" size="1">
-                  <option value="по популярности">по популярности</option>
-                  <option value="по цене">по цене</option>
-                </select>
-              </label>
+              <div class="filter__fieldset filter__fieldset--hover">
+                <span class="filter__field">по популярности</span>
+              </div>
             </section>
 
             <section class="filter__item">
@@ -97,46 +96,32 @@
 
             <section class="filter__item">
               <p class="filter__item-name">Жирность:</p>
-              <label class="filter__field">
-                <input type="radio" name="Жирность" value="0%">
-                0%
-              </label>
-              <label class="filter__field">
-                <input type="radio" name="Жирность" value="до 10%" checked>
-                до 10%
-              </label>
-              <label class="filter__field">
-                <input type="radio" name="Жирность" value="до 30%">
-                до 30%
-              </label>
-              <label class="filter__field">
-                <input type="radio" name="Жирность" value="выше 30%">
-                выше 30%
-              </label>
+              <div class="filter__fieldset">
+                <input id="fat-0" type="radio" name="Жирность" value="0%" hidden>
+                <label class="filter__field" for="fat-0">0%</label>
+                <input id="fat-lt-10" type="radio" name="Жирность" value="до 10%" hidden checked>
+                <label class="filter__field" for="fat-lt-10">до 10%</label>
+                <input id="fat-lt-30" type="radio" name="Жирность" value="до 30%" hidden>
+                <label class="filter__field" for="fat-lt-30">до 30%</label>
+                <input id="fat-gt-30" type="radio" name="Жирность" value="выше 30%" hidden>
+                <label class="filter__field" for="fat-gt-30">выше 30%</label>
+              </div>
             </section>
 
             <section class="filter__item">
               <p class="filter__item-name">Наполнители:</p>
-              <label class="filter__field">
-                <input type="checkbox" name="шоколадные" checked>
-                шоколадные
-              </label>
-              <label class="filter__field">
-                <input type="checkbox" name="сахарные присыпки" checked>
-                сахарные присыпки
-              </label>
-              <label class="filter__field">
-                <input type="checkbox" name="фрукты">
-                фрукты
-              </label>
-              <label class="filter__field">
-                <input type="checkbox" name="сиропы">
-                сиропы
-              </label>
-              <label class="filter__field">
-                <input type="checkbox" name="джемы">
-                джемы
-              </label>
+              <div class="filter__fieldset">
+                <input id="chocolate" type="checkbox" name="шоколадные" hidden checked>
+                <label class="filter__field" for="chocolate">шоколадные</label>
+                <input id="sugar-species" type="checkbox" name="сахарные присыпки" hidden checked>
+                <label class="filter__field" for="sugar-species">сахарные присыпки</label>
+                <input id="fruits" type="checkbox" name="фрукты" hidden>
+                <label class="filter__field" for="fruits">фрукты</label>
+                <input id="syrups" type="checkbox" name="сиропы" hidden>
+                <label class="filter__field" for="syrups">сиропы</label>
+                <input id="jams" type="checkbox" name="джемы" hidden>
+                <label class="filter__field" for="jams">джемы</label>
+              </div>
             </section>
 
             <section class="filter__item">
@@ -258,31 +243,29 @@
             </p>
           </article>
 
-          <div class="paginator">
-            <ul class="paginator__list">
-              <li class="paginator__item paginator__item--prev paginator__item--disable">
-                &lt;
-              </li>
-              <li class="paginator__item paginator__item--active">
-                1
-              </li>
-              <li class="paginator__item">
-                <a href="#">2</a>
-              </li>
-              <li class="paginator__item">
-                <a href="#">3</a>
-              </li>
-              <li class="paginator__item">
-                <a href="#">4</a>
-              </li>
-              <li class="paginator__item">
-                <a href="#">5</a>
-              </li>
-              <li class="paginator__item paginator__item--next">
-                <a href="#">&gt;</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="paginator">
+            <li class="paginator__item paginator__item--prev paginator__item--disable">
+              <a>&lt;</a>
+            </li>
+            <li class="paginator__item paginator__item--active">
+              <a>1</a>
+            </li>
+            <li class="paginator__item">
+              <a href="#">2</a>
+            </li>
+            <li class="paginator__item">
+              <a href="#">3</a>
+            </li>
+            <li class="paginator__item">
+              <a href="#">4</a>
+            </li>
+            <li class="paginator__item">
+              <a href="#">5</a>
+            </li>
+            <li class="paginator__item paginator__item--next">
+              <a href="#">&gt;</a>
+            </li>
+          </ul>
         </section>
       </div>
     </main>
@@ -331,5 +314,14 @@
         </section>
       </div>
     </footer>
+    <script>
+      var disabledFields = document.querySelectorAll(".disabled");
+
+      for (var i = 0; i < disabledFields.length; ++i) {
+        disabledFields[i].addEventListener("click", function(event) {
+          event.preventDefault();
+        });
+      }
+    </script>
   </body>
 </html>
