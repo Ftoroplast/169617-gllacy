@@ -16,6 +16,23 @@
         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
+              <ul class="modal-window modal-window--navigation">
+                <li class="modal-window__title modal-window__title--navigation">
+                  Новинки
+                </li>
+                <li class="modal-window__link modal-window__link--navigation">
+                  <a href="#">Сливочное</a>
+                </li>
+                <li class="modal-window__link modal-window__link--navigation">
+                  <a href="#">Щербеты</a>
+                </li>
+                <li class="modal-window__link modal-window__link--navigation">
+                  <a href="#">Фруктовый лёд</a>
+                </li>
+                <li class="modal-window__link modal-window__link--navigation">
+                  <a href="#">Мелорин</a>
+                </li>
+              </ul>
               <a class="navigation__link" href="catalog.html">Каталог</a>
             </li>
             <li class="navigation__item">
@@ -29,10 +46,23 @@
 
         <ul class="user-block">
           <li class="user-block__item user-block__item--search">
+            <form class="modal-window modal-window--search" action="#" method="GET">
+              <input class="modal-window__field modal-window__field--search" id="search" type="text" name="search" placeholder="Что ищем?">
+            </form>
             <a class="user-block__btn user-block__btn--search" href="#">Поиск</a>
           </li>
 
           <li class="user-block__item user-block__item--login">
+            <form class="modal-window modal-window--login" action="#" method="GET">
+              <input class="modal-window__field modal-window__field--login" type="email" placeholder="Электронная почта">
+              <input class="modal-window__field modal-window__field--login" type="password" placeholder="Пароль">
+              <input id="btn-login" type="submit" hidden>
+              <label class="btn btn--login" for="btn-login">Войти</label>
+              <p class="modal-window__links">
+                <a class="modal-window__link modal-window__link--login" href="#">Забыли пароль?</a>
+                <a class="modal-window__link modal-window__link--login" href="#">Новая регистрация</a>
+              </p>
+            </form>
             <a class="user-block__btn user-block__btn--login" href="#">Вход</a>
           </li>
 

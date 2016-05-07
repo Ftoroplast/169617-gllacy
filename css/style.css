@@ -150,6 +150,7 @@ a {
 .navigation__list {
   padding: 15px 0;
   padding-top: 13px;
+  padding-bottom: 0;
   list-style: none;
   font-size: 0;
 }
@@ -159,6 +160,7 @@ a {
 
   display: inline-block;
   vertical-align: top;
+  padding-bottom: 10px;
   margin-right: 1px;
 }
 
@@ -184,8 +186,9 @@ a {
   font-weight: 700;
 }
 
-.navigation__link:hover {
-  color: #363636;
+.navigation__item:hover > .navigation__link,
+.navigation__modal-window:hover + .navigation__link {
+  color: #000000;
 }
 
 .navigation__link::before {
@@ -203,7 +206,8 @@ a {
   border-radius: 20px;
 }
 
-.navigation__link:hover::before {
+.navigation__item:hover > .navigation__link::before,
+.navigation__modal-window:hover + .navigation__link::before {
   display: block;
 }
 
@@ -234,7 +238,7 @@ a.navigation__link:active::before {
   background-color: #ba6f5a;
 }
 
-.navigation__item--active a.navigation__link {
+.navigation__item.navigation__item--active a.navigation__link {
   color: #ffffff;
 
   cursor: auto;
@@ -242,6 +246,80 @@ a.navigation__link:active::before {
 
 .navigation__item--active a.navigation__link::after {
   display: none;
+}
+
+.modal-window {
+  position: absolute;
+  z-index: 5;
+
+  display: none;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.modal-window--navigation {
+  left: -5px;
+  top: 40px;
+
+  width: 140px;
+  padding: 13px 0;
+
+  list-style: none;
+}
+
+.modal-window__link--navigation {
+  padding-top: 8px;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+
+.modal-window__link--navigation:hover {
+  background-color: rgba(186, 111, 90, 0.3);
+}
+
+.modal-window__link--navigation:active {
+  background-color: rgba(186, 111, 90, 0.6);
+}
+
+.modal-window__link--navigation.modal-window__link--active {
+  background-color: rgba(186, 111, 90, 1);
+}
+
+.modal-window__link--navigation a {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+.modal-window__link--navigation.modal-window__link--active a {
+  color: #ffffff;
+}
+
+.modal-window__title--navigation {
+  padding-left: 13px;;
+  padding-bottom: 10px;
+  margin: 0 7px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-weight: 700;
+}
+
+.modal-window__link:last-of-type {
+  margin-bottom: 0;
+}
+
+.navigation__item:hover > .modal-window--navigation,
+.modal-window:hover {
+  display: block;
 }
 
 .user-block {
@@ -253,7 +331,10 @@ a.navigation__link:active::before {
 }
 
 .user-block__item {
+  position: relative;
+
   display: inline-block;
+  padding-bottom: 5px;
   margin-right: 10px;
 
   vertical-align: top;
@@ -294,9 +375,35 @@ a.navigation__link:active::before {
   font-size: 0;
 }
 
-.user-block__btn--search:hover {
+.user-block__item:hover > .user-block__btn--search {
   background-color: #ffffff;
   background-image: url("../img/icon__search--loupe-black.svg");
+}
+
+.modal-window--search {
+  right: 0;
+  top: 37px;
+
+  width: 340px;
+  padding: 20px 15px;
+}
+
+.user-block__item:hover > .modal-window {
+  display: block;
+}
+
+.modal-window__field {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+
+  border: 1px solid #d2d2d1;
+  border-radius: 5px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-weight: 400;
 }
 
 .user-block__btn--login {
@@ -323,14 +430,50 @@ a.navigation__link:active::before {
   background-repeat: no-repeat;
 }
 
-.user-block__btn--login:hover {
+.user-block__item:hover > .user-block__btn--login {
   color: #353535;
 
   background-color: #ffffff;
 }
 
-.user-block__btn--login:hover::before {
+.user-block__item:hover > .user-block__btn--login::before {
   background-image: url("../img/icon__user--login-black.svg");
+}
+
+.modal-window--login {
+  top: 37px;
+  right: 0;
+
+  width: 280px;
+
+  padding: 20px;
+
+  text-align: left;
+}
+
+.modal-window__links {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.modal-window__link--login {
+  display: block;
+  text-decoration: underline;
+
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000;
+  font-family: "Roboto Regular", "Arial", sans-serif;
+}
+
+.modal-window__field--login {
+  margin-bottom: 20px;
+}
+
+.btn--login {
+  padding: 10px 25px;
+  margin-right: 20px;
 }
 
 .user-block__btn--cart {
@@ -383,6 +526,65 @@ a.navigation__link:active::before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 16px 11px;
+}
+
+.modal-window--cart {
+  top: 37px;
+  right: 0;
+
+  width: 500px;
+}
+
+.modal-window__cart-item {
+  text-align: left;
+
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+.modal-window__cross {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: top;
+  width: 11px;
+  height: 11px;
+
+  font-size: 0;
+}
+
+.modal-window__cross::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(45deg, transparent 5px, #000000 5px, #000000 6px, transparent 6px),
+                    linear-gradient(to left top, transparent 5px, #000000 5px, #000000 6px, transparent 6px);
+  background-size: 100% 100%;
+  background-position: 1px -1px, 0 -1px;
+  background-repeat: no-repeat;
+}
+
+.modal-window__cart-item-picture {
+  display: inline-block;
+  vertical-align: top;
+  width: 33px;
+  height: 33px;
+}
+
+.modal-window__cart-item-name {
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-weight: 400;
 }
 
 .worktime-phone-block {
@@ -1368,9 +1570,10 @@ label.filter__field:hover::before {
   padding: 5px 28px;
   margin-top: 21px;
 
-  background-color: #a1afa4;
   border: 2px solid #ffffff;
   border-radius: 25px;
+
+  background-color: #a1afa4;
 
   cursor: pointer;
 
@@ -1380,12 +1583,13 @@ label.filter__field:hover::before {
 .filter__btn:hover {
   color: #000000;
 
-  padding: 7px 30px;
-  border: none;
+  border-color: #ffffff;
   background-color: #ffffff;
 }
 
 .filter__btn:active {
+  border: none;
+  padding: 7px 30px;
   background-color: #e9e9e9;
   box-shadow: inset 0 2px 0 0 #6c6d6b;
 }
