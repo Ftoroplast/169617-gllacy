@@ -74,13 +74,13 @@
           <form class="filter__form" action="#" method="POST">
             <section class="filter__item">
               <p class="filter__item-name">Сортировка:</p>
-              <div class="filter__fieldset filter__fieldset--hover">
-                <span class="filter__field">по популярности</span>
+              <div class="filter__fieldset filter__fieldset--sort">
+                <a class="filter__field">по популярности</a>
               </div>
             </section>
 
             <section class="filter__item">
-              <p class="filter__item-name">Цена: 100р. - 500р.</p>
+              <p class="filter__item-name">Цена: 100 руб. - 500 руб.</p>
               <div class="range-filter">
                 <div class="range-filter__controls">
                   <div class="range-filter__scale">
@@ -96,7 +96,7 @@
 
             <section class="filter__item">
               <p class="filter__item-name">Жирность:</p>
-              <div class="filter__fieldset">
+              <div class="filter__fieldset filter__fieldset--fat">
                 <input id="fat-0" type="radio" name="Жирность" value="0%" hidden>
                 <label class="filter__field" for="fat-0">0%</label>
                 <input id="fat-lt-10" type="radio" name="Жирность" value="до 10%" hidden checked>
@@ -110,7 +110,7 @@
 
             <section class="filter__item">
               <p class="filter__item-name">Наполнители:</p>
-              <div class="filter__fieldset">
+              <div class="filter__fieldset filter__fieldset--species">
                 <input id="chocolate" type="checkbox" name="шоколадные" hidden checked>
                 <label class="filter__field" for="chocolate">шоколадные</label>
                 <input id="sugar-species" type="checkbox" name="сахарные присыпки" hidden checked>
@@ -271,7 +271,7 @@
     </main>
 
     <footer>
-      <div class="container container--footer">
+      <div class="container container--footer container--footer-on-inner-page">
         <section class="social column column--footer column--one-quarter">
           <ul class="social__list">
             <li class="social__item">
