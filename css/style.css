@@ -67,11 +67,14 @@ img {
   box-sizing: border-box;
 
   border-radius: 20px;
+  background-image: -webkit-linear-gradient(top, #f26843, #e74b36);
   background-image: linear-gradient(to bottom, #f26843, #e74b36);
   box-shadow: 0 2px 1px 0 #63000c;
 
   text-shadow: 2px 2px 1px #ca3f26;
   text-decoration: none;
+
+  cursor: pointer;
 
   font-size: 18px;
   line-height: 24px;
@@ -81,11 +84,13 @@ img {
 }
 
 .btn:hover {
+  background-image: -webkit-linear-gradient(top, #dd856c, #d47061);
   background-image: linear-gradient(to bottom, #dd856c, #d47061);
   box-shadow: 0 2px 0 0 #931702;
 }
 
 .btn:active {
+  background-image: -webkit-linear-gradient(bottom, #f26843, #e74b36);
   background-image: linear-gradient(to top, #f26843, #e74b36);
   box-shadow: inset 0 2px 1px 0 #63000c;
 }
@@ -392,7 +397,7 @@ a.navigation__link:active::before {
   display: block;
 }
 
-.modal-window__field {
+.field {
   box-sizing: border-box;
   width: 100%;
   padding: 15px;
@@ -404,6 +409,69 @@ a.navigation__link:active::before {
   line-height: 16px;
   font-family: "Roboto Regular", "Arial", sans-serif;
   font-weight: 400;
+}
+
+.field:hover {
+  padding: 13px;
+  border: 3px solid #c6c6c5;
+}
+
+.field:focus {
+  padding: 13px;
+  border: 3px solid #a3bdea;
+}
+
+.field + label::before {
+  position: absolute;
+  left: 33px;
+  top: 8px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: #989898;
+  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+.field:focus + label::before {
+  left: 33px;
+  top: -15px;
+
+  font-size: 11px;
+  line-height: 13px;
+  color: #a3bdea;
+}
+
+.field--search + label::before {
+  content: "Что ищем?";
+  left: 30px;
+  top: 31px;
+}
+
+.field--search:focus + label::before {
+  left: 30px;
+  top: 5px;
+}
+
+.field--login-email + label::before {
+  content: "Электронная почта";
+  left: 30px;
+  top: 31px;
+}
+
+.field--login-email:focus + label::before {
+  left: 30px;
+  top: 5px;
+}
+
+.field--login-password + label::before {
+  content: "Пароль";
+  left: 30px;
+  top: 100px;
+}
+
+.field--login-password:focus + label::before {
+  top: 74px;
 }
 
 .user-block__btn--login {
@@ -467,7 +535,8 @@ a.navigation__link:active::before {
   font-family: "Roboto Regular", "Arial", sans-serif;
 }
 
-.modal-window__field--login {
+.field--login-email,
+.field--login-password {
   margin-bottom: 20px;
 }
 
@@ -566,6 +635,9 @@ tr.modal-window__cart-item {
 }
 
 .modal-window__cross {
+  position: relative;
+  top: -5px;
+
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 22px;
   line-height: 22px;
@@ -581,7 +653,8 @@ tr.modal-window__cart-item {
   position: absolute;
   left: 57%;
   top: 20%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 td.modal-window__cart-item-name {
@@ -652,6 +725,9 @@ td.modal-window__cart-total-cost {
 }
 
 .offers {
+  background-image: url("../img/bg__main-offer--ice-cream.png"),
+                    -webkit-linear-gradient(left, #849d8f, transparent 50%, #849d8f),
+                    -webkit-linear-gradient(bottom, transparent, #caf0dc 50%, transparent);
   background-image: url("../img/bg__main-offer--ice-cream.png"),
                     linear-gradient(to right, #849d8f, transparent 50%, #849d8f),
                     linear-gradient(to top, transparent, #caf0dc 50%, transparent);
@@ -825,6 +901,7 @@ input[name="slider"]:checked + .slider__btn {
   padding: 10px;
 
   border-radius: 20px;
+  background-image: -webkit-linear-gradient(top, #f26843, #e74b36);
   background-image: linear-gradient(to bottom, #f26843, #e74b36);
   box-shadow: 0 2px 1px 0 #63000c;
 
@@ -840,11 +917,13 @@ input[name="slider"]:checked + .slider__btn {
 }
 
 .product:hover .link--product:hover::after {
+  background-image: -webkit-linear-gradient(top, #dd856c, #d47061);
   background-image: linear-gradient(to bottom, #dd856c, #d47061);
   box-shadow: 0 2px 0 0 #931702;
 }
 
 .product:hover .link--product:active::after {
+  background-image: -webkit-linear-gradient(bottom, #f26843, #e74b36);
   background-image: linear-gradient(to top, #f26843, #e74b36);
   box-shadow: inset 0 2px 1px 0 #63000c;
 }
@@ -1020,6 +1099,8 @@ input[name="slider"]:checked + .slider__btn {
   padding: 5px;
   border-radius: 15px;
   background-image: url("../img/pattern__subscription--red-blue-lines.png"),
+                    -webkit-linear-gradient(#f8f7f4, #f8f7f4);
+  background-image: url("../img/pattern__subscription--red-blue-lines.png"),
                     linear-gradient(#f8f7f4, #f8f7f4);
 }
 
@@ -1044,24 +1125,39 @@ input[name="slider"]:checked + .slider__btn {
   border-radius: 0 0 10px 10px;
   padding-left: 20px;
   padding-bottom: 35px;
-  padding-right: 190px;
+  padding-right: 160px;
 
   background-color: #f8f7f4;
 }
 
-.content__field--subscription {
-  width: 100%;
+.field--subscription {
   vertical-align: top;
 
   padding: 8px 13px;
   margin-right: 10px;
-  border: 1px solid #d3d3d2;
-  border-radius: 5px;
 
   font-size: 16px;
   line-height: 24px;
   font-family: "Roboto Regular", "Arial", sans-serif;
   font-weight: 400;
+}
+
+.field--subscription:hover {
+  padding: 7px 12px;
+}
+
+.field--subscription:focus {
+  padding: 7px 12px;
+}
+
+.field--subscription + label::before {
+  content: "Электронная почта";
+}
+
+.field--subscription:focus + label::before {
+  font-size: 11px;
+  line-height: 13px;
+  color: #a3bdea;
 }
 
 .btn--subscription {
@@ -1460,7 +1556,8 @@ input[name="slider"]:checked + .slider__btn {
 .range-filter__controls {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 
   min-width: 188px;
   height: 100%;
@@ -1469,7 +1566,8 @@ input[name="slider"]:checked + .slider__btn {
 .range-filter__scale {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 
   min-width: 188px;
   height: 5px;
@@ -1480,7 +1578,8 @@ input[name="slider"]:checked + .slider__btn {
 .range-filter__toggle {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 
   width: 20px;
   height: 20px;
@@ -1510,7 +1609,8 @@ input[name="slider"]:checked + .slider__btn {
 }
 
 .range-filter__toggle:hover {
-  transform:  translateY(-50%) scale(1.1);
+  -webkit-transform:  translateY(-50%) scale(1.1);
+          transform:  translateY(-50%) scale(1.1);
 }
 
 label.filter__field {
@@ -1529,7 +1629,8 @@ input[name="Жирность"] + .filter__field::before {
   position: absolute;
   top: 50%;
   left: 3px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 
   box-sizing: border-box;
   width: 20px;
@@ -1544,7 +1645,8 @@ input[name="Жирность"]:checked + .filter__field::after {
   position: absolute;
   left: 8px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 10px;
   height: 10px;
 
@@ -1565,7 +1667,8 @@ input[type="checkbox"] + .filter__field::before {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 
   box-sizing: border-box;
   width: 20px;
@@ -1580,7 +1683,8 @@ input[type="checkbox"]:checked + .filter__field::after {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 
   width: 20px;
   height: 20px;
@@ -1726,7 +1830,9 @@ li.paginator__item.paginator__item--active a::before {
   background-repeat: no-repeat;
   background-position: top center;
 
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+
+          transform: rotate(180deg);
 
   font-size: 0;
 }

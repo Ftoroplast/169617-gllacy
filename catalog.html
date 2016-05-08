@@ -50,15 +50,18 @@
           <li class="user-block__item user-block__item--search">
             <a class="user-block__btn user-block__btn--search" href="#">Поиск</a>
             <form class="modal-window modal-window--search" action="#" method="GET">
-              <input class="modal-window__field modal-window__field--search" id="search" type="text" name="search" placeholder="Что ищем?">
+              <input class="field field--search" id="search" type="text" name="search">
+              <label for="search"></label>
             </form>
           </li>
 
           <li class="user-block__item user-block__item--login">
             <a class="user-block__btn user-block__btn--login" href="#">Вход</a>
             <form class="modal-window modal-window--login" action="#" method="GET">
-              <input class="modal-window__field modal-window__field--login" type="email" placeholder="Электронная почта">
-              <input class="modal-window__field modal-window__field--login" type="password" placeholder="Пароль">
+              <input class="field field--login-email" id="login-email" type="email">
+              <label for="login-email"></label>
+              <input class="field field--login-password" id="login-password" type="password">
+              <label for="login-password"></label>
               <input id="btn-login" type="submit" hidden>
               <label class="btn btn--login" for="btn-login">Войти</label>
               <p class="modal-window__links">
@@ -98,8 +101,8 @@
                   <td class="modal-window__cart-total-cost" colspan="5">Итого: 750 руб.</td>
                 </tr>
               </table>
-              <div class="btn btn--cart">Оформить заказ</div>
-            </div>``
+              <a class="btn btn--cart">Оформить заказ</a>
+            </div>
           </li>
         </ul>
 
