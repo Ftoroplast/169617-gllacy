@@ -503,13 +503,13 @@ a.navigation__link:active::before {
   background-size: 21px 20px;
 }
 
-.user-block__btn--cart:hover {
-  color: #353535;
+.user-block__item:hover > .user-block__btn--cart {
+  color: #000000;
 
   background-color: #ffffff;
 }
 
-.user-block__btn--cart:hover::before {
+.user-block__item:hover > .user-block__btn--cart::before {
   background-image: url("../img/icon__cart--black.svg");
 }
 
@@ -532,10 +532,62 @@ a.navigation__link:active::before {
   top: 37px;
   right: 0;
 
-  width: 500px;
+  padding: 20px 15px;
+  padding-top: 30px;
 }
 
-.modal-window__cart-item {
+.modal-window__table--cart {
+  width: 510px;
+
+  margin-bottom: 15px;
+}
+
+.modal-window__table td {
+  box-sizing: border-box;
+  padding-bottom: 30px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.modal-window__cart-item:nth-last-of-type(2) td {
+  padding-bottom: 20px;
+}
+
+tr.modal-window__cart-item {
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  font-family: "Roboto Regular", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+.modal-window__cross-section {
+  width: 20px;
+}
+
+.modal-window__cross {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 22px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.modal-window__cart-item-picture {
+  position: relative;
+  width: 40px;
+}
+
+.modal-window__cart-item-picture img {
+  position: absolute;
+  left: 57%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+td.modal-window__cart-item-name {
+  width: 240px;
+  padding: 0 10px;
+  padding-bottom: 20px;
   text-align: left;
 
   font-size: 13px;
@@ -545,46 +597,29 @@ a.navigation__link:active::before {
   font-weight: 400;
 }
 
-.modal-window__cross {
-  position: relative;
-
-  display: inline-block;
-  vertical-align: top;
-  width: 11px;
-  height: 11px;
-
-  font-size: 0;
+.modal-window__cart-item-calculator {
+  width: 120px;
 }
 
-.modal-window__cross::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background-image: linear-gradient(45deg, transparent 5px, #000000 5px, #000000 6px, transparent 6px),
-                    linear-gradient(to left top, transparent 5px, #000000 5px, #000000 6px, transparent 6px);
-  background-size: 100% 100%;
-  background-position: 1px -1px, 0 -1px;
-  background-repeat: no-repeat;
+.modal-window__cart-item-calculator--price {
+  color: #b1b1b1;
 }
 
-.modal-window__cart-item-picture {
-  display: inline-block;
-  vertical-align: top;
-  width: 33px;
-  height: 33px;
+td.modal-window__cart-total-cost {
+  padding-top: 20px;
+  padding-bottom: 0;
+  border-top: 1px solid #c9c9c6;
+
+  text-align: right;
+
+  font-size: 15px;
+  line-height: 18px;
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-weight: 700;
 }
 
-.modal-window__cart-item-name {
-  font-size: 13px;
-  line-height: 16px;
-  color: #000000;
-  font-family: "Roboto Regular", "Arial", sans-serif;
-  font-weight: 400;
+.btn--cart {
+  padding: 10px 15px;
 }
 
 .worktime-phone-block {
@@ -722,7 +757,7 @@ input[name="slider"]:checked + .slider__btn {
 
 .content__text--offer {
   min-height: 80px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 
   font-size: 18px;
   line-height: 22px;
@@ -735,10 +770,6 @@ input[name="slider"]:checked + .slider__btn {
   padding: 11px 22px;
 
   border-radius: 25px;
-
-  font-size: 18px;
-  font-family: "Roboto Bold", "Arial", sans-serif;
-  font-weight: 700;
 }
 
 .banners .content:last-of-type {
@@ -759,7 +790,7 @@ input[name="slider"]:checked + .slider__btn {
 }
 
 .product:last-of-type {
-  margin-bottom: 100px;
+  margin-bottom: 105px;
 }
 
 .product--hit:last-of-type {
@@ -866,7 +897,7 @@ input[name="slider"]:checked + .slider__btn {
 }
 
 .product__title {
-  padding: 0 7px;
+  padding: 1px 5px;
 
   text-align: center;
 }
@@ -1061,10 +1092,10 @@ input[name="slider"]:checked + .slider__btn {
   top: 135px;
   left: 265px;
 
-  width: 79px;
-  height: 139px;
+  width: 218px;
+  height: 142px;
 
-  background-image: url("../img/icon__map--ice-cream.svg");
+  background-image: url("../img/icon__map--ice-cream.png");
   background-size: cover;
 }
 
@@ -1327,7 +1358,7 @@ input[name="slider"]:checked + .slider__btn {
 }
 
 .filter {
-  margin-bottom: 25px;
+  margin-bottom: 21px;
 }
 
 .filter__form {
