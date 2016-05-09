@@ -23,17 +23,17 @@
                 <li class="modal-window__title modal-window__title--navigation">
                   Новинки
                 </li>
-                <li class="modal-window__link modal-window__link--navigation">
-                  <a href="#">Сливочное</a>
+                <li class="modal-window__link modal-window__link--navigation modal-window__link--active">
+                  <a>Сливочное</a>
                 </li>
                 <li class="modal-window__link modal-window__link--navigation">
-                  <a href="#">Щербеты</a>
+                  <a href="catalog.html">Щербеты</a>
                 </li>
                 <li class="modal-window__link modal-window__link--navigation">
-                  <a href="#">Фруктовый лёд</a>
+                  <a href="catalog.html">Фруктовый лёд</a>
                 </li>
                 <li class="modal-window__link modal-window__link--navigation">
-                  <a href="#">Мелорин</a>
+                  <a href="catalog.html">Мелорин</a>
                 </li>
               </ul>
             </li>
@@ -50,7 +50,7 @@
           <li class="user-block__item user-block__item--search">
             <a class="user-block__btn user-block__btn--search" href="#">Поиск</a>
             <form class="modal-window modal-window--search" action="#" method="GET">
-              <input class="field field--search" id="search" type="text" name="search">
+              <input class="field field--search" id="search" type="text" name="search" placeholder="Что ищем?">
               <label for="search"></label>
             </form>
           </li>
@@ -58,9 +58,9 @@
           <li class="user-block__item user-block__item--login">
             <a class="user-block__btn user-block__btn--login" href="#">Вход</a>
             <form class="modal-window modal-window--login" action="#" method="GET">
-              <input class="field field--login-email" id="login-email" type="email">
+              <input class="field field--login-email" id="login-email" type="email" placeholder="Электронная почта">
               <label for="login-email"></label>
-              <input class="field field--login-password" id="login-password" type="password">
+              <input class="field field--login-password" id="login-password" type="password" placeholder="Пароль">
               <label for="login-password"></label>
               <input id="btn-login" type="submit" hidden>
               <label class="btn btn--login" for="btn-login">Войти</label>
@@ -377,14 +377,6 @@
         </section>
       </div>
     </footer>
-    <script>
-      var disabledFields = document.querySelectorAll(".disabled");
-
-      for (var i = 0; i < disabledFields.length; ++i) {
-        disabledFields[i].addEventListener("click", function(event) {
-          event.preventDefault();
-        });
-      }
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
