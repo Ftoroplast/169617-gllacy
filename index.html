@@ -8,182 +8,195 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
-      <div class="container clearfix">
-        <div class="logo logo--index">
-          <img src="img/pic__logo--gllacy.svg" width="154" height="64" alt="Gllacy Shop">
-        </div>
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a class="navigation__link" href="catalog.html">Каталог</a>
-              <ul class="modal-window modal-window--navigation">
-                <li class="modal-window__title modal-window__title--navigation">
-                  Новинки
-                </li>
-                <li class="modal-window__link modal-window__link--navigation">
-                  <a href="catalog.html">Сливочное</a>
-                </li>
-                <li class="modal-window__link modal-window__link--navigation">
-                  <a href="catalog.html">Щербеты</a>
-                </li>
-                <li class="modal-window__link modal-window__link--navigation">
-                  <a href="catalog.html">Фруктовый лёд</a>
-                </li>
-                <li class="modal-window__link modal-window__link--navigation">
-                  <a href="catalog.html">Мелорин</a>
-                </li>
-              </ul>
+    <input type="radio" id="slider-btn-1" name="slider" hidden checked>
+    <input  type="radio" id="slider-btn-2" name="slider" hidden>
+    <input  type="radio" id="slider-btn-3" name="slider" hidden>
+    <div class="site-wrapper">
+      <div class="content-wrapper">
+        <header>
+          <div class="container">
+          <div class="logo logo--index">
+            <img src="img/pic__logo--gllacy.svg" width="154" height="64" alt="Gllacy Shop">
+          </div>
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="catalog.html">Каталог</a>
+                <ul class="modal-window modal-window--navigation">
+                  <li class="modal-window__title modal-window__title--navigation">
+                    Новинки
+                  </li>
+                  <li class="modal-window__link modal-window__link--navigation">
+                    <a href="catalog.html">Сливочное</a>
+                  </li>
+                  <li class="modal-window__link modal-window__link--navigation">
+                    <a href="catalog.html">Щербеты</a>
+                  </li>
+                  <li class="modal-window__link modal-window__link--navigation">
+                    <a href="catalog.html">Фруктовый лёд</a>
+                  </li>
+                  <li class="modal-window__link modal-window__link--navigation">
+                    <a href="catalog.html">Мелорин</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Доставка и оплата</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">О Компании</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="user-block">
+            <li class="user-block__item user-block__item--search">
+              <a class="user-block__btn user-block__btn--search" href="#">Поиск</a>
+              <form class="modal-window modal-window--search" action="#" method="GET">
+                <input class="field field--search" id="search" type="text" name="search" placeholder="Что ищем?">
+                <label for="search"></label>
+              </form>
             </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Доставка и оплата</a>
+
+            <li class="user-block__item user-block__item--login">
+              <a class="user-block__btn user-block__btn--login" href="#">Вход</a>
+              <form class="modal-window modal-window--login" action="#" method="GET">
+                <input class="field field--login-email" id="login-email" type="email" placeholder="Электронная почта">
+                <label for="login-email"></label>
+                <input class="field field--login-password" id="login-password" type="password" placeholder="Пароль">
+                <label for="login-password"></label>
+                <input id="btn-login" type="submit" hidden>
+                <label class="btn btn--login" for="btn-login">Войти</label>
+                <p class="modal-window__links">
+                  <a class="modal-window__link modal-window__link--login" href="#">Забыли пароль?</a>
+                  <a class="modal-window__link modal-window__link--login" href="#">Новая регистрация</a>
+                </p>
+              </form>
             </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">О Компании</a>
+
+            <li class="user-block__item user-block__item--cart">
+              <a class="user-block__btn user-block__btn--cart" href="#">Пусто</a>
             </li>
           </ul>
-        </nav>
 
-        <ul class="user-block">
-          <li class="user-block__item user-block__item--search">
-            <a class="user-block__btn user-block__btn--search" href="#">Поиск</a>
-            <form class="modal-window modal-window--search" action="#" method="GET">
-              <input class="field field--search" id="search" type="text" name="search" placeholder="Что ищем?">
-              <label for="search"></label>
-            </form>
-          </li>
-
-          <li class="user-block__item user-block__item--login">
-            <a class="user-block__btn user-block__btn--login" href="#">Вход</a>
-            <form class="modal-window modal-window--login" action="#" method="GET">
-              <input class="field field--login-email" id="login-email" type="email" placeholder="Электронная почта">
-              <label for="login-email"></label>
-              <input class="field field--login-password" id="login-password" type="password" placeholder="Пароль">
-              <label for="login-password"></label>
-              <input id="btn-login" type="submit" hidden>
-              <label class="btn btn--login" for="btn-login">Войти</label>
-              <p class="modal-window__links">
-                <a class="modal-window__link modal-window__link--login" href="#">Забыли пароль?</a>
-                <a class="modal-window__link modal-window__link--login" href="#">Новая регистрация</a>
-              </p>
-            </form>
-          </li>
-
-          <li class="user-block__item user-block__item--cart">
-            <a class="user-block__btn user-block__btn--cart" href="#">Пусто</a>
-          </li>
-        </ul>
-
-        <div class="worktime-phone-block">
-          <p class="worktime-phone-block__worktime">С 10 до 20, ежедневно</p>
-          <p class="worktime-phone-block__phone">
-            <a href="tel:88124502525">8 812 450-25-25</a>
-          </p>
+          <div class="worktime-phone-block">
+            <p class="worktime-phone-block__worktime">С 10 до 20, ежедневно</p>
+            <p class="worktime-phone-block__phone">
+              <a href="tel:88124502525">8 812 450-25-25</a>
+            </p>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <main>
-      <div class="container">
-        <section class="offers">
-          <section class="main-offer">
-            <div class="slider">
-              <input type="radio" id="slide1" name="slider" hidden checked>
-              <label class="slider__btn" for="slide1"></label>
-              <input  type="radio" id="slide2" name="slider" hidden>
-              <label class="slider__btn" for="slide2"></label>
-              <input  type="radio" id="slide3" name="slider" hidden>
-              <label class="slider__btn" for="slide3"></label>
+      <main>
+        <div class="container">
+        <section class="main-offer">
+          <div class="slider">
+            <div class="slider__slide" id="slide1">
+              <h2 class="main-offer__title">Крем-брюле и пломбир с малиновым джемом</h2>
+              <a class="btn btn--main-offer" href="#">Давайте оба!</a>
             </div>
-            <h2 class="main-offer__title">Крем-брюле и пломбир с малиновым джемом</h2>
-            <a class="btn btn--main-offer" href="#">Давайте оба!</a>
-          </section>
-
-          <section class="banners">
-            <section class="content content--offer content--raspberry column column--two-quarters clearfix">
-              <h2 class="content__title content__title--offer">Малинка даром!</h2>
-              <p class="content__text content__text--offer">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-              <a class="btn btn--offer" href="#">Хочу варенье!</a>
-            </section>
-
-            <section class="content content--offer content--chocolate column column--two-quarters clearfix">
-              <h2 class="content__title content__title--offer">Шоколадки даром!</h2>
-              <p class="content__text content__text--offer">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-              <a class="btn btn--offer" href="#">Хочу шоколадки!</a>
-            </section>
-          </section>
-        </section>
-
-        <section class="products products--hit">
-          <article class="product product--hit column column--one-quarter">
-            <div class="product__image">
-              <img src="img/pic__product--cream_with_orange_marmalade_and_citrus_chips.png" width="266" height="266" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-              <p class="product__price">310&#8381;<span>/кг</span></p>
+            <div class="slider__slide" id="slide2">
+              <h2 class="main-offer__title">Шоколадный пломбир и лимонный сорбет</h2>
+              <a class="btn btn--main-offer" href="#">Давайте оба!</a>
             </div>
-            <p class="product__title"><a class="link link--light link--product" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
-          </article>
-
-          <article class="product product--hit column column--one-quarter">
-            <div class="product__image">
-              <img src="img/pic__product--creamy_coffee_with_chocolate_chips.png" width="266" height="266" alt="Сливочно-кофейное с кусочками шоколада">
-              <p class="product__price">380&#8381;<span>/кг</span></p>
+            <div class="slider__slide" id="slide3">
+              <h2 class="main-offer__title">Пломбир с помадкой и клубничный щербет</h2>
+              <a class="btn btn--main-offer" href="#">Давайте оба!</a>
             </div>
-            <p class="product__title"><a class="link link--light link--product" href="#">Сливочно-кофейное с кусочками шоколада</a></p>
-          </article>
-
-          <article class="product product--hit column column--one-quarter">
-            <div class="product__image">
-              <img src="img/pic__product--creamy_strawberry_with_sprinkles_of_white_chocolate.png" width="266" height="266" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-              <p class="product__price">355&#8381;<span>/кг</span></p>
+            <div class="slider__controls">
+              <label class="slider__btn" for="slider-btn-1"></label>
+              <label class="slider__btn" for="slider-btn-2"></label>
+              <label class="slider__btn" for="slider-btn-3"></label>
             </div>
-            <p class="product__title"><a class="link link--light link--product" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
-          </article>
-
-          <article class="product product--hit column column--one-quarter">
-            <div class="product__image">
-              <img src="img/pic__product--сreamy_creme_brulee_with_caramel_sauce.png" width="266" height="266" alt="Сливочное крем-брюле с карамельной подливкой">
-              <p class="product__price">415&#8381;<span>/кг</span></p>
-            </div>
-            <p class="product__title"><a class="link link--light link--product" href="#">Сливочное крем-брюле с карамельной подливкой</a></p>
-          </article>
-        </section>
-
-        <section class="content content--about">
-          <h2 class="content__title content__title--about">Магазин Глейси&#160;&#160;&#8212;&#160;&#160;это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
-          <p class="content__text content__text--about">Всё наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-          <p class="content__text content__text--about">Закупка ингредиентов&#160;&#160;производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-          <p class="content__text content__text--about">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены
-            из натурального, экологически чистого сырья.</p>
-          <p class="content__text content__text--about">Доставка нашего мороженого до заказчиков&#160;осуществляется в&#160;специальном термопаке, который не даёт мороженому растаять в пути и позволяет ему
-            сохранить свой превосходный вкус.</p>
+          </div>
         </section>
 
         <section class="banners">
-          <section class="content content--news column column--two-quarters">
-            <h3 class="content__title content__title--news">Новое в нашем блоге</h3>
-            <p class="content__text content__text--news">
-              <a class="link link--dark link--news" href="#">10&#160;&#160;способов сервировки фруктовых щербетов к&#160;столу</a>
-            </p>
+          <section class="content content--offer content--raspberry column column--two-quarters clearfix">
+            <h2 class="content__title content__title--offer">Малинка даром!</h2>
+            <p class="content__text content__text--offer">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <a class="btn btn--offer" href="#">Хочу варенье!</a>
           </section>
 
-          <section class="content content--subscription column column--two-quarters">
-            <p class="content__text content__text--subscription">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
-              Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-            <form action="#" class="content__form content__form--subscription">
-              <input class="field field--subscription" id="email-field" type="email" name="e-mail" placeholder="Электронная почта">
-              <label for="email-field"></label>
-              <input id="subscription-btn" type="submit" value="Отправить" hidden>
-              <label class="btn btn--subscription" for="subscription-btn">Отправить</label>
-            </form>
+          <section class="content content--offer content--chocolate column column--two-quarters clearfix">
+            <h2 class="content__title content__title--offer">Шоколадки даром!</h2>
+            <p class="content__text content__text--offer">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+            <a class="btn btn--offer" href="#">Хочу шоколадки!</a>
           </section>
         </section>
-      </div>
+      </section>
 
-      <section class="map clearfix">
-        <div class="contacts">
-          <p class="contacts__text contacts__text--address">Адрес главного офиса и офлайн магазина:</p>
-          <p class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-          <p class="contacts__text contacts__text--phone">Для заказов по телефону:</p>
+      <section class="products products--hit">
+        <article class="product product--hit column column--one-quarter">
+          <div class="product__image">
+            <img src="img/pic__product--cream_with_orange_marmalade_and_citrus_chips.png" width="266" height="266" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <p class="product__price">310&#8381;<span>/кг</span></p>
+          </div>
+          <p class="product__title"><a class="link link--light link--product" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
+        </article>
+
+        <article class="product product--hit column column--one-quarter">
+          <div class="product__image">
+            <img src="img/pic__product--creamy_coffee_with_chocolate_chips.png" width="266" height="266" alt="Сливочно-кофейное с кусочками шоколада">
+            <p class="product__price">380&#8381;<span>/кг</span></p>
+          </div>
+          <p class="product__title"><a class="link link--light link--product" href="#">Сливочно-кофейное с кусочками шоколада</a></p>
+        </article>
+
+        <article class="product product--hit column column--one-quarter">
+          <div class="product__image">
+            <img src="img/pic__product--creamy_strawberry_with_sprinkles_of_white_chocolate.png" width="266" height="266" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <p class="product__price">355&#8381;<span>/кг</span></p>
+          </div>
+          <p class="product__title"><a class="link link--light link--product" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
+        </article>
+
+        <article class="product product--hit column column--one-quarter">
+          <div class="product__image">
+            <img src="img/pic__product--сreamy_creme_brulee_with_caramel_sauce.png" width="266" height="266" alt="Сливочное крем-брюле с карамельной подливкой">
+            <p class="product__price">415&#8381;<span>/кг</span></p>
+          </div>
+          <p class="product__title"><a class="link link--light link--product" href="#">Сливочное крем-брюле с карамельной подливкой</a></p>
+        </article>
+      </section>
+
+      <section class="content content--about">
+        <h2 class="content__title content__title--about">Магазин Глейси&#160;&#160;&#8212;&#160;&#160;это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
+        <p class="content__text content__text--about">Всё наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+        <p class="content__text content__text--about">Закупка ингредиентов&#160;&#160;производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+        <p class="content__text content__text--about">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены
+          из натурального, экологически чистого сырья.</p>
+        <p class="content__text content__text--about">Доставка нашего мороженого до заказчиков&#160;осуществляется в&#160;специальном термопаке, который не даёт мороженому растаять в пути и позволяет ему
+          сохранить свой превосходный вкус.</p>
+      </section>
+
+      <section class="banners">
+        <section class="content content--news column column--two-quarters">
+          <h3 class="content__title content__title--news">Новое в нашем блоге</h3>
+          <p class="content__text content__text--news">
+            <a class="link link--dark link--news" href="#">10&#160;&#160;способов сервировки фруктовых щербетов к&#160;столу</a>
+          </p>
+        </section>
+
+        <section class="content content--subscription column column--two-quarters">
+          <p class="content__text content__text--subscription">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
+            Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+          <form action="#" class="content__form content__form--subscription">
+            <input class="field field--subscription" id="email-field" type="email" name="e-mail" placeholder="Электронная почта">
+            <label for="email-field"></label>
+            <input id="subscription-btn" type="submit" value="Отправить" hidden>
+            <label class="btn btn--subscription" for="subscription-btn">Отправить</label>
+          </form>
+        </section>
+      </section>
+    </div>
+
+    <section class="map clearfix">
+      <div class="contacts">
+        <p class="contacts__text contacts__text--address">Адрес главного офиса и офлайн магазина:</p>
+        <p class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+        <p class="contacts__text contacts__text--phone">Для заказов по телефону:</p>
           <p class="contacts__phone">
             <a href="tel:88124502525">8 812 450-25-25</a>
           </p>
@@ -237,6 +250,8 @@
         </section>
       </div>
     </footer>
+      </div>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
