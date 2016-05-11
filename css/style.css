@@ -1,3 +1,35 @@
+@font-face
+{
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face
+{
+  font-family: "Roboto Medium";
+  src: url("../fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face
+{
+  font-family: "Roboto Black";
+  src: url("../fonts/Roboto-Black.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face
+{
+  font-family: "Roboto Bold";
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
 body
 {
     font-family: 'Roboto Regular', 'Arial', sans-serif;
@@ -16,12 +48,12 @@ body
     box-sizing: border-box;
     min-width: 900px;
 
-    transition: background-color .5 ease, background-image .5 ease;
+    -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
 
-    background-color: #849d8f;
-    background-image: url('../img/bg__main-offer--creme_brulee_and_ice_cream_with_raspberry_jam.png');
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+
     background-repeat: no-repeat;
-    background-position: center 80px;
+    background-position: center top;
 }
 
 .site-wrapper.site-wrapper--inner-page {
@@ -141,7 +173,6 @@ img
     color: #fff;
     border-radius: 20px;
     background: #f26843;
-    background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
     background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
     background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
     box-shadow: 0 2px 2px rgba(172, 16, 0, .64);
@@ -149,7 +180,6 @@ img
 
 .btn:hover
 {
-    background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
     background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
     background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
     box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
@@ -157,7 +187,6 @@ img
 
 .btn:active
 {
-    background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
     background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
     background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
     box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
@@ -165,7 +194,8 @@ img
 
 .link
 {
-    text-decoration: underline;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3);
+    text-decoration: none;
 }
 
 .link--light
@@ -175,17 +205,22 @@ img
 
 .link--dark
 {
-    color: #323232;
+    color: #000000;
+
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.3);
 }
 
 .link--light:hover
 {
-    color: #eebb9e;
+    color: #ffbc9e;
+    box-shadow: 0 1px 0 0 rgba(255, 188, 158, 0.3);
 }
 
 .link--dark:hover
 {
-    color: #ca4e3b;
+    color: #e84d37;
+
+    box-shadow: 0 1px 0 0 rgba(232, 77, 55, 0.3);
 }
 
 header
@@ -323,7 +358,7 @@ a.navigation__link:active::before
 {
     display: block;
 
-    background-color: #ba6f5a;
+    background-color: #d07058;
 }
 
 .navigation__item.navigation__item--active a.navigation__link
@@ -358,7 +393,9 @@ a.navigation__link:active::before
 
     display: block;
 
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+            transform: translate(-50%, -50%);
 }
 
 .modal-window--contacts
@@ -407,7 +444,7 @@ a.navigation__link:active::before
 
 .field.field--contacts.field--email + label::before
 {
-    top: 122px;
+    top: 130px;
     left: 38px;
 
     content: 'Ваша почта для ответа?';
@@ -415,7 +452,7 @@ a.navigation__link:active::before
 
 .field.field--contacts.field--message + label::before
 {
-    top: 190px;
+    top: 206px;
     left: 38px;
 
     content: 'Напишите что-нибудь...';
@@ -457,17 +494,17 @@ a.navigation__link:active::before
 
 .modal-window__link--navigation:hover
 {
-    background-color: rgba(186, 111, 90, .2);
+    background-color: #fbded7;
 }
 
 .modal-window__link--navigation:active
 {
-    background-color: rgba(186, 111, 90, .6);
+    background-color: #f6b5a5;
 }
 
 .modal-window__link--navigation.modal-window__link--active
 {
-    background-color: rgba(186, 111, 90, 1);
+    background-color: #d07058;
 }
 
 .modal-window__link--navigation a
@@ -553,7 +590,7 @@ a.navigation__link:active::before
     text-decoration: none;
 
     color: #fff;
-    background-color: #a1b5aa;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .user-block__item--cart
@@ -596,10 +633,10 @@ a.navigation__link:active::before
 
 .field
 {
-    font-family: 'Roboto Regular', 'Arial', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
+    font-family: 'Roboto Bold', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
 
     box-sizing: border-box;
     width: 100%;
@@ -652,6 +689,16 @@ a.navigation__link:active::before
     color: #a3bdea;
 }
 
+.field::-webkit-input-placeholder {
+  font-family: 'Roboto Regular', 'Arial', sans-serif;
+  font-weight: 400;
+}
+
+.field:-moz-placeholder {
+  font-family: 'Roboto Regular', 'Arial', sans-serif;
+  font-weight: 400;
+}
+
 .field--search + label::before
 {
     top: 31px;
@@ -668,29 +715,24 @@ a.navigation__link:active::before
 
 .field--login-email + label::before
 {
-    top: 31px;
-    left: 30px;
-
     content: 'Электронная почта';
 }
 
 .field--login-email:focus + label::before
 {
-    top: 5px;
+    top: 6px;
     left: 30px;
 }
 
 .field--login-password + label::before
 {
-    top: 100px;
-    left: 30px;
-
     content: 'Пароль';
 }
 
 .field--login-password:focus + label::before
 {
-    top: 74px;
+    top: 82px;
+    left: 32px;
 }
 
 .user-block__btn--login
@@ -1088,22 +1130,19 @@ td.modal-window__cart-total-cost
 #slider-btn-1:checked ~ .site-wrapper
 {
     background-color: #849d8f;
-    background-image: url('../img/bg__main-offer--creme_brulee_and_ice_cream_with_raspberry_jam.png'),
-    radial-gradient(circle closest-side at 50% 350px, #fff, transparent);
+    background-image: url('../img/bg__main-offer--creme_brulee_and_ice_cream_with_raspberry_jam.png');
 }
 
 #slider-btn-2:checked ~ .site-wrapper
 {
     background-color: #8996a6;
-    background-image: url('../img/bg__main-offer--chocolate_ice_cream_and_lemon_sorbet.png'),
-    radial-gradient(circle closest-side at 50% 350px, #fff, transparent);
+    background-image: url('../img/bg__main-offer--chocolate_ice_cream_and_lemon_sorbet.png');
 }
 
 #slider-btn-3:checked ~ .site-wrapper
 {
     background-color: #9d8b84;
-    background-image: url('../img/bg__main-offer--sundae_with_fudge_and_strawberry_sherbet.png'),
-    radial-gradient(circle closest-side at 50% 350px, #fff, transparent);
+    background-image: url('../img/bg__main-offer--sundae_with_fudge_and_strawberry_sherbet.png');
 }
 
 .banners
@@ -1246,7 +1285,6 @@ td.modal-window__cart-total-cost
     color: #fff;
     border-radius: 20px;
     background: #f26843;
-    background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
     background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
     background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
     box-shadow: 0 2px 2px rgba(172, 16, 0, .64);
@@ -1254,7 +1292,6 @@ td.modal-window__cart-total-cost
 
 .product:hover .link--product:hover::after
 {
-    background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
     background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
     background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
     box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
@@ -1262,7 +1299,6 @@ td.modal-window__cart-total-cost
 
 .product:hover .link--product:active::after
 {
-    background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
     background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
     background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
     box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
@@ -1328,11 +1364,6 @@ td.modal-window__cart-total-cost
     padding: 1px 5px;
 
     text-align: center;
-}
-
-.link--product
-{
-    padding-top: 1px;
 }
 
 .content--about
@@ -1461,8 +1492,6 @@ td.modal-window__cart-total-cost
 
 .link--news:active
 {
-    padding-top: 2px;
-
     box-shadow: -15px 15px 0 -14px rgba(202, 78, 59, .5);
 }
 
@@ -1507,11 +1536,6 @@ td.modal-window__cart-total-cost
 
 .field--subscription
 {
-    font-family: 'Roboto Regular', 'Arial', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-
     margin-right: 10px;
     padding: 8px 13px;
 
@@ -1520,12 +1544,12 @@ td.modal-window__cart-total-cost
 
 .field--subscription:hover
 {
-    padding: 7px 12px;
+    padding: 6px 11px;
 }
 
 .field--subscription:focus
 {
-    padding: 7px 12px;
+    padding: 6px 11px;
 }
 
 .field--subscription + label::before
@@ -1797,11 +1821,6 @@ td.modal-window__cart-total-cost
     background-size: cover;
 }
 
-.link--footer-menu
-{
-    padding-top: 4px;
-}
-
 .copyright
 {
     margin-right: 0;
@@ -1836,11 +1855,6 @@ td.modal-window__cart-total-cost
     line-height: 18px;
 }
 
-.link--copyright
-{
-    padding-top: 5px;
-}
-
 .breadcrumbs
 {
     font-size: 0;
@@ -1866,7 +1880,6 @@ td.modal-window__cart-total-cost
 .link--breadcrumbs
 {
     margin-right: 4px;
-    padding-top: 2px;
 }
 
 .breadcrumbs__item span
@@ -1953,7 +1966,7 @@ td.modal-window__cart-total-cost
     margin-right: 16px;
 }
 
-.filter__fieldset a
+.filter__field--sort
 {
     display: inline-block;
 
@@ -1961,11 +1974,11 @@ td.modal-window__cart-total-cost
     padding-right: 10px;
 }
 
-.filter__fieldset a::after
+.filter__field--sort::after
 {
     position: absolute;
-    top: 16px;
-    right: 13px;
+    top: 7px;
+    right: -1px;
 
     width: 8px;
     height: 5px;
@@ -1989,9 +2002,17 @@ td.modal-window__cart-total-cost
     color: #000;
 }
 
-.filter__fieldset:hover a::after
+.filter__fieldset--sort:hover .filter__field::after
 {
     background-image: url('../img/icon__filter--arrow-down-black.svg');
+}
+
+.filter__field.filter__field--sort
+{
+  padding-left: 0;
+  padding-right: 10px;
+
+  cursor: pointer;
 }
 
 .range-filter

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Gllacy Shop</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -140,7 +139,10 @@
                 <section class="filter__item">
                   <p class="filter__item-name">Сортировка:</p>
                   <div class="filter__fieldset filter__fieldset--sort">
-                    <a class="filter__field">по популярности</a>
+                    <select name="sort" id="sort" hidden>
+                      <option value="по популярности">по популярности</option>
+                    </select>
+                    <label class="filter__field filter__field--sort" for="sort">по популярности</label>
                   </div>
                 </section>
 
@@ -179,8 +181,8 @@
                     <input id="chocolate" type="checkbox" name="шоколадные" hidden checked>
                     <label class="filter__field" for="chocolate">шоколадные</label>
                     <input id="sugar-species" type="checkbox" name="сахарные присыпки" hidden checked>
-                    <input id="fruits" type="checkbox" name="фрукты" hidden>
                     <label class="filter__field" for="sugar-species">сахарные присыпки</label>
+                    <input id="fruits" type="checkbox" name="фрукты" hidden>
                     <label class="filter__field" for="fruits">фрукты</label>
                     <input id="syrups" type="checkbox" name="сиропы" hidden>
                     <label class="filter__field" for="syrups">сиропы</label>

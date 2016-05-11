@@ -8,7 +8,7 @@ var crossContacts = document.querySelector(".modal-window__cross.modal-window__c
 
 for (var i = 0; i < fields.length; ++i) {
   fields[i].addEventListener("focus", function () {
-     placeholder = this.getAttribute("placeholder");
+    placeholder = this.getAttribute("placeholder");
     this.setAttribute("placeholder", "");
   });
   fields[i].addEventListener("blur", function () {
