@@ -5,6 +5,14 @@
     <title>Gllacy Shop</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <![if gte IE 10]>
+      <style>
+        .form__field {
+          font-family: "Roboto Regular", "Arial", sans-serif;
+          font-weight: 400;
+        }
+      </style>
+    <![endif]>
   </head>
   <body>
     <div class="site-wrapper site-wrapper--inner-page">
@@ -50,26 +58,36 @@
             <ul class="user-block">
               <li class="user-block__item user-block__item--search">
                 <a class="user-block__btn user-block__btn--search" href="#">Поиск</a>
-                <form class="modal-window modal-window--search" action="#" method="GET">
-                  <input class="field field--search" id="search" type="text" name="search" placeholder="Что ищем?">
-                  <label for="search"></label>
-                </form>
+                <div class="modal-window modal-window--search">
+                  <form class="form form--search" action="#" method="GET">
+                    <div class="form__item form__item--search">
+                      <input class="form__field form__field--search" id="search" type="text" name="search" placeholder="Что ищем?">
+                      <label class="form__label form__label--search" for="search">Что ищем?</label>
+                    </div>
+                  </form>
+                </div>
               </li>
 
               <li class="user-block__item user-block__item--login">
                 <a class="user-block__btn user-block__btn--login" href="#">Вход</a>
-                <form class="modal-window modal-window--login" action="#" method="GET">
-                  <input class="field field--login-email" id="login-email" type="email" placeholder="Электронная почта">
-                  <label for="login-email"></label>
-                  <input class="field field--login-password" id="login-password" type="password" placeholder="Пароль">
-                  <label for="login-password"></label>
-                  <input id="btn-login" type="submit" hidden>
-                  <label class="btn btn--login" for="btn-login">Войти</label>
-                  <p class="modal-window__links">
-                    <a class="modal-window__link modal-window__link--login" href="#">Забыли пароль?</a>
-                    <a class="modal-window__link modal-window__link--login" href="#">Новая регистрация</a>
-                  </p>
-                </form>
+                <div class="modal-window modal-window--login">
+                  <form class="form form--login" action="#" method="GET">
+                    <div class="form__item form__item--login">
+                      <input class="form__field form__field--login-email" id="login-email" type="email" placeholder="Электронная почта">
+                      <label class="form__label form__label--login-email" for="login-email">Электронная почта</label>
+                    </div>
+                    <div class="form__item form__item--password">
+                      <input class="form__field form__field--login-password" id="login-password" type="password" placeholder="Пароль">
+                      <label class="form__label form__label--password" for="login-password">Пароль</label>
+                    </div>
+                    <input id="btn-login" type="submit" hidden>
+                    <label class="btn btn--login" for="btn-login">Войти</label>
+                    <p class="modal-window__links">
+                      <a class="modal-window__link modal-window__link--login" href="#">Забыли пароль?</a>
+                      <a class="modal-window__link modal-window__link--login" href="#">Новая регистрация</a>
+                    </p>
+                  </form>
+                </div>
               </li>
 
               <li class="user-block__item user-block__item--cart">
@@ -112,8 +130,8 @@
               <p class="worktime-phone-block__phone">
                 <a href="tel:88124502525">8 812 450-25-25</a>
               </p>
-            </div>
           </div>
+        </div>
         </header>
 
         <main>

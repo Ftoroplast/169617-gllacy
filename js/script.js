@@ -1,5 +1,5 @@
 var disabledElements = document.querySelectorAll(".disabled");
-var fields = document.querySelectorAll(".field");
+var fields = document.querySelectorAll(".form__field");
 var placeholder = "";
 var btnContacts = document.querySelector("a.btn.btn--contacts");
 var contactsModalWindow = document.querySelector(".modal-window.modal-window--contacts");
