@@ -618,7 +618,8 @@ a.navigation__link:active::before {
 .user-block__btn--login {
   min-width: 92px;
   min-height: 32px;
-  padding: 7px 14px;
+  padding: 5px 14px;
+  padding-left: 16px;
 
   border-radius: 20px;
 }
@@ -685,7 +686,7 @@ a.navigation__link:active::before {
 .user-block__btn--cart {
   min-width: 116px;
   min-height: 32px;
-  padding: 7px 13px;
+  padding: 6px 15px;
 
   border-radius: 20px;
 }
@@ -932,7 +933,7 @@ td.modal-window__cart-total-cost {
 .slider__controls {
   position: absolute;
   bottom: 60px;
-  left: -4px;
+  left: 0;
 
   font-size: 0;
 }
@@ -1031,7 +1032,7 @@ td.modal-window__cart-total-cost {
 }
 
 .product {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   font-family: "Roboto Medium", "Arial", sans-serif;
   font-size: 16px;
@@ -1043,8 +1044,8 @@ td.modal-window__cart-total-cost {
   margin-bottom: 105px;
 }
 
-.product--hit:last-of-type {
-  margin-bottom: 40px;
+.product.product--hit {
+  margin-bottom: 38px;
 }
 
 .product:hover {
@@ -1157,7 +1158,7 @@ td.modal-window__cart-total-cost {
 }
 
 .product__title {
-  padding: 1px 5px;
+  padding: 1px 6px;
 
   text-align: center;
 }
@@ -1371,7 +1372,7 @@ td.modal-window__cart-total-cost {
 
 .contacts {
   position: absolute;
-  top: 63px;
+  top: 61px;
   right: 2.3%;
   bottom: 63px;
 
@@ -1432,6 +1433,7 @@ td.modal-window__cart-total-cost {
 .btn--contacts {
   width: 100%;
   padding: 10px 0;
+  padding-left: 9px;
 
   text-align: center;
 
