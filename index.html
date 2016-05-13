@@ -5,14 +5,6 @@
     <title>Gllacy Shop</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <![if gte IE 10]>
-      <style>
-        .form__field {
-          font-family: "Roboto Regular", "Arial", sans-serif;
-          font-weight: 400;
-        }
-      </style>
-    <![endif]>
   </head>
   <body>
     <input type="radio" id="slider-btn-1" name="slider" hidden checked>
@@ -61,7 +53,7 @@
                 <a class="user-block__btn user-block__btn--search" href="#">Поиск</a>
                 <div class="modal-window modal-window--search">
                   <form class="form form--search" action="#" method="GET">
-                    <div class="form__item form__item--search"> //form__item - обёртка для кроссбраузерной стилизации плейсхолдера
+                    <div class="form__item form__item--search">
                       <input class="form__field form__field--search" id="search" type="text" name="search" placeholder="Что ищем?">
                       <label class="form__label form__label--search" for="search">Что ищем?</label>
                     </div>
