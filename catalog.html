@@ -68,12 +68,11 @@
                       <input class="form__field form__field--login-email" id="login-email" type="email" placeholder="Электронная почта">
                       <label class="form__label form__label--login-email" for="login-email">Электронная почта</label>
                     </div>
-                    <div class="form__item form__item--password">
+                    <div class="form__item form__item--login">
                       <input class="form__field form__field--login-password" id="login-password" type="password" placeholder="Пароль">
-                      <label class="form__label form__label--password" for="login-password">Пароль</label>
+                      <label class="form__label form__label--login-password" for="login-password">Пароль</label>
                     </div>
-                    <input id="btn-login" type="submit" hidden>
-                    <label class="btn btn--login" for="btn-login">Войти</label>
+                    <input class="btn btn--login" id="btn-login" type="submit" value="Войти">
                     <p class="modal-window__links">
                       <a class="modal-window__link modal-window__link--login" href="#">Забыли пароль?</a>
                       <a class="modal-window__link modal-window__link--login" href="#">Новая регистрация</a>
@@ -146,17 +145,19 @@
 
             <section class="filter">
               <form class="filter__form" action="#" method="POST">
-                <section class="filter__item">
+                <div class="filter__item">
                   <p class="filter__item-name">Сортировка:</p>
                   <div class="filter__fieldset filter__fieldset--sort">
-                    <select name="sort" id="sort" hidden>
-                      <option value="по популярности">по популярности</option>
+                    <select class="filter__field filter__field--sort" name="sort" id="sort">
+                      <option value="popularity">по популярности</option>
+                      <option value="low-cost">сначала недорогие</option>
+                      <option value="high-cost">сначала дорогие</option>
+                      <option value="fat">по жирности</option>
                     </select>
-                    <label class="filter__field filter__field--sort" for="sort">по популярности</label>
                   </div>
-                </section>
+                </div>
 
-                <section class="filter__item">
+                <div class="filter__item">
                   <p class="filter__item-name">Цена: 100 руб. &#8212; 500 руб.</p>
                   <div class="range-filter">
                     <div class="range-filter__controls">
@@ -166,45 +167,44 @@
                       <div class="range-filter__toggle range-filter__toggle--max-toggle"></div>
                       <div class="range-filter__toggle range-filter__toggle--min-toggle"></div>
                     </div>
-                    <input type="text" name="min-price" value="100" hidden>
-                    <input type="text" name="max-price" value="500" hidden>
+                    <input type="text" name="min-price" value="100">
+                    <input type="text" name="max-price" value="500">
                   </div>
-                </section>
+                </div>
 
-                <section class="filter__item">
+                <div class="filter__item">
                   <p class="filter__item-name">Жирность:</p>
                   <div class="filter__fieldset filter__fieldset--fat">
-                    <input id="fat-0" type="radio" name="Жирность" value="0%" hidden>
-                    <label class="filter__field" for="fat-0">0%</label>
-                    <input id="fat-lt-10" type="radio" name="Жирность" value="до 10%" hidden checked>
-                    <label class="filter__field" for="fat-lt-10">до 10%</label>
-                    <input id="fat-lt-30" type="radio" name="Жирность" value="до 30%" hidden>
-                    <label class="filter__field" for="fat-lt-30">до 30%</label>
-                    <input id="fat-gt-30" type="radio" name="Жирность" value="выше 30%" hidden>
-                    <label class="filter__field" for="fat-gt-30">выше 30%</label>
+                    <input id="fat-0" type="radio" name="fat" value="0%">
+                    <label class="filter__field filter__field--fat" for="fat-0">0%</label>
+                    <input id="fat-lt-10" type="radio" name="fat" value="до 10%" checked>
+                    <label class="filter__field filter__field--fat" for="fat-lt-10">до 10%</label>
+                    <input id="fat-lt-30" type="radio" name="fat" value="до 30%">
+                    <label class="filter__field filter__field--fat" for="fat-lt-30">до 30%</label>
+                    <input id="fat-gt-30" type="radio" name="fat" value="выше 30%">
+                    <label class="filter__field filter__field--fat" for="fat-gt-30">выше 30%</label>
                   </div>
-                </section>
+                </div>
 
-                <section class="filter__item">
+                <div class="filter__item">
                   <p class="filter__item-name">Наполнители:</p>
                   <div class="filter__fieldset filter__fieldset--species">
-                    <input id="chocolate" type="checkbox" name="шоколадные" hidden checked>
-                    <label class="filter__field" for="chocolate">шоколадные</label>
-                    <input id="sugar-species" type="checkbox" name="сахарные присыпки" hidden checked>
-                    <label class="filter__field" for="sugar-species">сахарные присыпки</label>
-                    <input id="fruits" type="checkbox" name="фрукты" hidden>
-                    <label class="filter__field" for="fruits">фрукты</label>
-                    <input id="syrups" type="checkbox" name="сиропы" hidden>
-                    <label class="filter__field" for="syrups">сиропы</label>
-                    <input id="jams" type="checkbox" name="джемы" hidden>
-                    <label class="filter__field" for="jams">джемы</label>
+                    <input id="chocolate" type="checkbox" name="chocolate" checked>
+                    <label class="filter__field filter__field--species" for="chocolate">шоколадные</label>
+                    <input id="sugar-species" type="checkbox" name="sugar-species" checked>
+                    <label class="filter__field filter__field--species" for="sugar-species">сахарные присыпки</label>
+                    <input id="fruits" type="checkbox" name="fruits">
+                    <label class="filter__field filter__field--species" for="fruits">фрукты</label>
+                    <input id="syrups" type="checkbox" name="syrups">
+                    <label class="filter__field filter__field--species" for="syrups">сиропы</label>
+                    <input id="jams" type="checkbox" name="jams">
+                    <label class="filter__field filter__field--species" for="jams">джемы</label>
                   </div>
-                </section>
+                </div>
 
-                <section class="filter__item">
-                  <input id="filter-btn" type="submit" value="Применить" hidden>
-                  <label class="filter__btn" for="filter-btn">Применить</label>
-                </section>
+                <div class="filter__item">
+                  <input class="filter__btn" id="filter-btn" type="submit" value="Применить">
+                </div>
               </form>
             </section>
 
