@@ -45,6 +45,7 @@ input[name="min-price"],
 input[name="max-price"],
 input[type="checkbox"] {
   position: absolute;
+
   opacity: 0;
 }
 
@@ -149,11 +150,11 @@ img {
 
 .btn {
   display: inline-block;
-  vertical-align: top;
 
   box-sizing: border-box;
 
   cursor: pointer;
+  vertical-align: top;
   text-decoration: none;
 
   color: #ffffff;
@@ -1092,13 +1093,13 @@ td.modal-window__cart-total-cost {
   left: 0;
 
   display: inline-block;
-  vertical-align: top;
 
   box-sizing: border-box;
   padding: 10px;
 
   content: "Быстрый просмотр";
   text-align: center;
+  vertical-align: top;
   text-decoration: none;
 
   color: #ffffff;
@@ -1301,9 +1302,9 @@ td.modal-window__cart-total-cost {
 
   border-radius: 15px;
   background-image: url("../img/pattern__subscription--red-blue-lines.png"),
-                    -webkit-linear-gradient(#f8f7f4, #f8f7f4);
+  -webkit-linear-gradient(#f8f7f4, #f8f7f4);
   background-image: url("../img/pattern__subscription--red-blue-lines.png"),
-                    linear-gradient(#f8f7f4, #f8f7f4);
+  linear-gradient(#f8f7f4, #f8f7f4);
 }
 
 .content__text--subscription {
@@ -1719,13 +1720,14 @@ td.modal-window__cart-total-cost {
 .filter__field--sort {
   min-width: 152px;
 
+  color: #ffffff;
+  border: none;
   background-color: transparent;
-  border:  none;
+
   font-family: "Roboto Medium", "Arial", sans-serif;
+  font-size: 16px;
   font-weight: 500;
-  color:  #ffffff;
-  font-size:  16px;
-  line-height:  18px;
+  line-height: 18px;
 }
 
 .filter__field--sort::after {
@@ -1745,8 +1747,8 @@ td.modal-window__cart-total-cost {
 
 .filter__fieldset--sort {
   padding-top: 6px;
-  padding-bottom: 8px;
   padding-right: 7px;
+  padding-bottom: 8px;
   padding-left: 9px;
 }
 
@@ -1936,15 +1938,14 @@ input[type="checkbox"]:checked + .filter__field--species::after {
   text-align: center;
   vertical-align: top;
 
+  color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 25px;
   background-color: #a1afa4;
 
-  color: #ffffff;
-
   font-family: "Roboto Medium", "Arial", sans-serif;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 18px;
 }
 
