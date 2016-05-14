@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Gllacy Shop</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize--compressed.css">
+    <link rel="stylesheet" href="css/style--compressed.css">
   </head>
   <body>
     <input type="radio" id="slider-btn-1" name="slider" checked>
@@ -66,11 +66,11 @@
                 <div class="modal-window modal-window--login">
                   <form class="form form--login" action="#" method="GET">
                     <div class="form__item form__item--login">
-                      <input class="form__field form__field--login-email" id="login-email" type="email" placeholder="Электронная почта">
+                      <input class="form__field form__field--login-email" id="login-email" type="email" placeholder="Электронная почта" required>
                       <label class="form__label form__label--login-email" for="login-email">Электронная почта</label>
                     </div>
                     <div class="form__item form__item--login">
-                      <input class="form__field form__field--login-password" id="login-password" type="password" placeholder="Пароль">
+                      <input class="form__field form__field--login-password" id="login-password" type="password" placeholder="Пароль" required>
                       <label class="form__label form__label--login-password" for="login-password">Пароль</label>
                     </div>
                     <input class="btn btn--login" id="btn-login" type="submit" value="Войти">
@@ -191,7 +191,7 @@
                   Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
                 <form action="#" class="form form--subscription">
                   <div class="form__item form__item--subscription">
-                    <input class="form__field form__field--subscription" id="email-field" type="email" name="e-mail" placeholder="Электронная почта">
+                    <input class="form__field form__field--subscription" id="email-field" type="email" name="e-mail" placeholder="Электронная почта" required>
                     <label class="form__label form__label--subscription" for="email-field">Электронная почта</label>
                   </div>
                   <input class="btn btn--subscription" id="subscription-btn" type="submit" value="Отправить">
@@ -200,7 +200,8 @@
             </section>
           </div>
 
-          <section class="map clearfix">
+          <section class="map map--outer">
+            <div class="map map--inner" id="map"></div>
             <article class="contacts">
               <p class="contacts__text contacts__text--address">Адрес главного офиса и офлайн магазина:</p>
               <p class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
@@ -214,19 +215,19 @@
           </section>
 
           <div class="modal-window modal-window--contacts">
-            <form class="form form--contacts">
+            <form class="form form--contacts" action="#" method="POST">
               <a class="modal-window__cross modal-window__cross--contacts" href="#">&times;</a>
               <p class="modal-window__text modal-window__text--contacts">Мы обязательно вам ответим!</p>
               <div class="form__item form__item--contacts form__item--name">
-                <input class="form__field form__field--contacts form__field--name" id="contacts-name" type="text" placeholder="Как вас зовут?">
+                <input class="form__field form__field--contacts form__field--name" id="contacts-name" type="text" name="name" placeholder="Как вас зовут?" required>
                 <label class="form__label form__label--contacts form__label--name" for="contacts-name">Как вас зовут?</label>
               </div>
               <div class="form__item form__item--contacts form__item--email">
-                <input class="form__field form__field--contacts form__field--email" id="contacts-email" type="email" placeholder="Ваша почта для ответа?">
+                <input class="form__field form__field--contacts form__field--email" id="contacts-email" type="email" name="e-mail" placeholder="Ваша почта для ответа?" required>
                 <label class="form__label form__label--contacts form__label--email" for="contacts-email">Ваша почта для ответа?</label>
               </div>
               <div class="form__item form__item--contacts form__item--message">
-                <textarea class="form__field form__field--contacts form__field--message" id="contacts-message" rows="7" placeholder="Напишите что-нибудь..."></textarea>
+                <textarea class="form__field form__field--contacts form__field--message" id="contacts-message" rows="7" name="message" placeholder="Напишите что-нибудь..." required></textarea>
                 <label class="form__label form__label--contacts form__label--message" for="contacts-message">Напишите что-нибудь...</label>
               </div>
               <input class="btn btn--contacts-modal-window" id="btn-contacts" type="submit" value="Отправить">
@@ -281,6 +282,8 @@
       </div>
       <div class="overlay"></div>
     </div>
-    <script src="js/script.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDazS8Q-9SsKGNe5WBZ2H1IqsNR-wwDYwM&signed_in=true&callback=initMap"></script>
+    <script src="js/script--compressed.js"></script>
   </body>
 </html>

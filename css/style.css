@@ -436,6 +436,13 @@ a {
 
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
+}
+
+.modal-window--error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .modal-window--cart {
@@ -1006,10 +1013,12 @@ td.modal-window__cart-total-cost {
 }
 
 .content--raspberry {
+  background-color: #b3001d;
   background-image: url("../img/bg__content--raspberry.png");
 }
 
 .content--chocolate {
+  background-color: #6c3e24;
   background-image: url("../img/bg__content--chocolate.png");
 }
 
@@ -1188,6 +1197,7 @@ td.modal-window__cart-total-cost {
   padding-left: 19px;
 
   border-radius: 15px;
+  background-color: #ede1ca;
   background-image: url("../img/pattern__about--waffle.png");
 
   font-size: 0;
@@ -1262,6 +1272,7 @@ td.modal-window__cart-total-cost {
   padding-bottom: 80px;
   padding-left: 19px;
 
+  background-color: #ffffff;
   background-image: url("../img/bg__content--strawberry.png");
   background-size: 100% 100%;
 }
@@ -1301,6 +1312,7 @@ td.modal-window__cart-total-cost {
   padding: 5px;
 
   border-radius: 15px;
+  background-color: transparent;
   background-image: url("../img/pattern__subscription--red-blue-lines.png"),
   -webkit-linear-gradient(#f8f7f4, #f8f7f4);
   background-image: url("../img/pattern__subscription--red-blue-lines.png"),
@@ -1367,25 +1379,14 @@ td.modal-window__cart-total-cost {
   position: relative;
 
   min-height: 430px;
+}
 
+.map--outer {
+  background-color: transparent;
   background-image: url("../img/bg__map--offline-shop.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1200px 430px;
-}
-
-.map::before {
-  position: absolute;
-  top: 135px;
-  left: 265px;
-
-  width: 218px;
-  height: 142px;
-
-  content: "";
-
-  background-image: url("../img/icon__map--ice-cream.png");
-  background-size: cover;
 }
 
 .contacts {
@@ -1501,6 +1502,7 @@ td.modal-window__cart-total-cost {
   opacity: 0.8;
   border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2098,4 +2100,72 @@ input[type="checkbox"]:checked + .filter__field--species::after {
 
 .overlay--show {
   display: block;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0) rotate(0);
+            transform: translate(-50%, -50%) scale(0) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotate(360deg);
+            transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0) rotate(0);
+            transform: translate(-50%, -50%) scale(0) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotate(360deg);
+            transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate(-55%, -50%);
+            transform: translate(-55%, -50%);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate(-45%, -50%);
+            transform: translate(-45%, -50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate(-55%, -50%);
+            transform: translate(-55%, -50%);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate(-45%, -50%);
+            transform: translate(-45%, -50%);
+  }
 }
