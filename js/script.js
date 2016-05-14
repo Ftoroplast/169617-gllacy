@@ -3,7 +3,6 @@ var fields = document.querySelectorAll(".form__field");
 var placeholder = "";
 var btnContacts = document.querySelector("a.btn.btn--contacts");
 var contactsModalWindow = document.querySelector(".modal-window.modal-window--contacts");
-var overlay = document.querySelector(".overlay");
 var crossContacts = document.querySelector(".modal-window__cross.modal-window__cross--contacts");
 var nameField = contactsModalWindow.querySelector("[name=\"name\"]");
 var emailField = contactsModalWindow.querySelector("[name=\"e-mail\"]");
@@ -46,24 +45,7 @@ btnContacts.addEventListener("click", function(event) {
 crossContacts.addEventListener("click", function(event) {
   event.preventDefault();
   contactsModalWindow.classList.remove("modal-window--show");
-  overlay.classList.remove("overlay--show");
   contactsModalWindow.classList.remove("modal-window--error");
-});
-
-overlay.addEventListener("click", function(event) {
-  contactsModalWindow.classList.remove("modal-window--show");
-  overlay.classList.remove("overlay--show");
-  contactsModalWindow.classList.remove("modal-window--error");
-});
-
-window.addEventListener("keydown", function(event) {
-  if (event.keyCode === 27) {
-    if (contactsModalWindow.classList.contains("modal-window--show")) {
-      overlay.classList.remove("overlay--show");
-      contactsModalWindow.classList.remove("modal-window--show");
-      contactsModalWindow.classList.remove("modal-window--error");
-    }
-  }
 });
 
 nameField.required = false;
