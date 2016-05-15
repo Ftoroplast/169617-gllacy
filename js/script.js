@@ -4,12 +4,14 @@ var placeholder = "";
 var btnContacts = document.querySelector("a.btn.btn--contacts");
 var contactsModalWindow = document.querySelector(".modal-window.modal-window--contacts");
 var crossContacts = document.querySelector(".modal-window__cross.modal-window__cross--contacts");
-var nameField = contactsModalWindow.querySelector("[name=\"name\"]");
-var emailField = contactsModalWindow.querySelector("[name=\"e-mail\"]");
-var messageField = contactsModalWindow.querySelector("[name=\"message\"]");
+var nameField = contactsModalWindow.querySelector(".form__field--contacts.form__field--name");
+var emailField = contactsModalWindow.querySelector(".form__field--contacts.form__field--email");
+var messageField = contactsModalWindow.querySelector(".form__field--contacts.form__field--message");
 var formContacts = contactsModalWindow.querySelector("form");
 var storedName = localStorage.getItem("nameField");
 var storedEmail = localStorage.getItem("emailField");
+var footer = document.querySelector("footer");
+var mapInner = document.getElementById("map");
 
 for (var i = 0; i < fields.length; ++i) {
   fields[i].addEventListener("focus", function () {
@@ -30,7 +32,6 @@ for (var i = 0; i < disabledElements.length; ++i) {
 btnContacts.addEventListener("click", function(event) {
   event.preventDefault();
   contactsModalWindow.classList.add("modal-window--show");
-  overlay.classList.add("overlay--show");
   if (storedName) {
     nameField.value = storedName;
     emailField.focus();
@@ -69,7 +70,6 @@ function initMap() {
     zoom: 16,
     center: {lat: 59.9386034, lng: 30.3293023}
   });
-
   var image = "img/icon__map--ice-cream.svg";
   var beachMarker = new google.maps.Marker({
     position: {lat: 59.938767, lng: 30.323100},
@@ -77,3 +77,5 @@ function initMap() {
     icon: image
   });
 }
+
+mapInner.style.bottom = footer.offsetHeight + "px";

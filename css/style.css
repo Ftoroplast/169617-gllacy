@@ -1387,11 +1387,19 @@ td.modal-window__cart-total-cost {
   background-size: 1200px 430px;
 }
 
+.map--inner {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 430px;
+}
+
 .contacts {
   position: absolute;
   top: 61px;
   right: 2.3%;
   bottom: 63px;
+  z-index: 2;
 
   overflow: hidden;
 
