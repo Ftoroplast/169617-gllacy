@@ -12,6 +12,7 @@ var storedName = localStorage.getItem("nameField");
 var storedEmail = localStorage.getItem("emailField");
 var footer = document.querySelector("footer");
 var mapInner = document.getElementById("map");
+var overlay = document.querySelector(".overlay");
 
 for (var i = 0; i < fields.length; ++i) {
   fields[i].addEventListener("focus", function () {
@@ -32,6 +33,7 @@ for (var i = 0; i < disabledElements.length; ++i) {
 btnContacts.addEventListener("click", function(event) {
   event.preventDefault();
   contactsModalWindow.classList.add("modal-window--show");
+  overlay.classList.add("overlay--show");
   if (storedName) {
     nameField.value = storedName;
     emailField.focus();
@@ -47,6 +49,7 @@ crossContacts.addEventListener("click", function(event) {
   event.preventDefault();
   contactsModalWindow.classList.remove("modal-window--show");
   contactsModalWindow.classList.remove("modal-window--error");
+  overlay.classList.remove("overlay--show");
 });
 
 nameField.required = false;
@@ -79,3 +82,4 @@ function initMap() {
 }
 
 mapInner.style.bottom = footer.offsetHeight + "px";
+mapInner.style.display = "block";
