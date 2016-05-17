@@ -2186,10 +2186,10 @@ input[type="checkbox"]:checked + .filter__field--species::after {
   }
 }
 
-.filter__field--disabled {
+input:disabled + .filter__field {
   opacity: 0.4;
 }
 
-.filter__field--disabled:hover::before {
+input:disabled + .filter__field:hover::before {
   border: 2px solid #ffffff;
 }
